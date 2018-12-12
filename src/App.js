@@ -6,10 +6,10 @@ import {
   completeTodo,
   setVisibilityFilter,
   VisibilityFilters
-} from "../actions";
-import AddTodo from "../components/AddTodo";
-import TodoList from "../components/TodoList";
-import Footer from "../components/Footer";
+} from "./actions";
+import AddTodo from "./components/AddTodo";
+import TodoList from "./components/TodoList";
+import Footer from "./components/Footer";
 
 class App extends React.Component {
   render() {

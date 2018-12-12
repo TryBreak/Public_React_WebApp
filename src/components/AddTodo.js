@@ -1,4 +1,4 @@
-import React, { findDOMNode, Component } from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 export default class AddTodo extends Component {
@@ -12,7 +12,7 @@ export default class AddTodo extends Component {
   }
 
   handleClick(e) {
-    const node = findDOMNode(this.refs.input);
+    const node = this.refs.input;
     const text = node.value.trim();
     this.props.onAddClick(text);
     node.value = "";

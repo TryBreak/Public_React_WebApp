@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-export default class AddTodo extends Component {
+class AddTodo extends Component {
   render() {
     return (
       <div>
@@ -22,3 +22,5 @@ export default class AddTodo extends Component {
 AddTodo.propTypes = {
   onAddClick: PropTypes.func.isRequired
 };
+
+export default AddTodo;

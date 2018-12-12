@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
-export default class Footer extends Component {
+class Footer extends React.Component {
   renderFilter(filter, name) {
     if (filter === this.props.filter) {
       return name;
@@ -37,3 +37,5 @@ Footer.propTypes = {
   filter: PropTypes.oneOf(["SHOW_ALL", "SHOW_COMPLETED", "SHOW_ACTIVE"])
     .isRequired
 };
+
+export default Footer;

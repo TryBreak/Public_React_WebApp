@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Todo from "./Todo";
 import PropTypes from "prop-types";
 
-export default class TodoList extends Component {
+class TodoList extends Component {
   render() {
     return (
       <ul>
@@ -27,3 +27,5 @@ TodoList.propTypes = {
     }).isRequired
   ).isRequired
 };
+
+export default TodoList;

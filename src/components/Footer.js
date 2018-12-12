@@ -8,14 +8,15 @@ class Footer extends React.Component {
     }
 
     return (
-      <span
+      <button
+        href="#"
         onClick={e => {
           e.preventDefault();
           this.props.onFilterChange(filter);
         }}
       >
         {name}
-      </span>
+      </button>
     );
   }
 

@@ -15,14 +15,7 @@ function visibilityFilter(state = SHOW_ALL, action) {
       return state;
   }
 }
-function visibilityFilter2(state = SHOW_ALL, action) {
-  switch (action.type) {
-    case SET_VISIBILITY_FILTER:
-      return action.filter;
-    default:
-      return state;
-  }
-}
+
 function todos(state = [], action) {
   switch (action.type) {
     case ADD_TODO:
@@ -48,7 +41,6 @@ function todos(state = [], action) {
 
 const todoApp = combineReducers({
   visibilityFilter,
-  visibilityFilter2,
   todos
 });
 

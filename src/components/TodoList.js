@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Todo from "./Todo";
 import PropTypes from "prop-types";
+import Todo from "./Todo";
 
 class TodoList extends Component {
   static propTypes = {

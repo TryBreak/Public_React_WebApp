@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import 'react-app-polyfill/ie9';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import "react-app-polyfill/ie9";
 
 class App extends Component {
   render() {

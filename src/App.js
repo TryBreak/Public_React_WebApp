@@ -1,26 +1,23 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import "react-app-polyfill/ie9";
+// 首先我们需要导入一些组件...
+// import { Link } from "react-router-dom";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <h1>App</h1>
+        {/* 把 <a> 变成 <Link> */}
+        <ul>
+          <li>{/* <Link to="/about">About</Link> */}</li>
+          <li>{/* <Link to="/inbox">Inbox</Link> */}</li>
+        </ul>
+
+        {/*
+          接着用 `this.props.children` 替换 `<Child>`
+          router 会帮我们找到这个 children
+        */}
+        {this.props.children}
       </div>
     );
   }

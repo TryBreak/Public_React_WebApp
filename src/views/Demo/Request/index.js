@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-class MainMenu extends Component {
+class Request extends Component {
   render() {
     return (
       <div>
-        <h1>demo</h1>
+        <h2>demo--Request</h2>
       </div>
     );
   }
 }
 
-export default MainMenu;
+export default Request;

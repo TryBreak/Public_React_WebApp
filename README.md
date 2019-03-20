@@ -38,7 +38,7 @@ npm run build
 
   - 新增 meta,禁止缩放
 
-- 新增 `react-router-dom`
+- 新增 `react-router-dom` 实现路由跳转
 
 ## 测试模块
 

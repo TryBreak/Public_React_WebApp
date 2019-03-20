@@ -33,3 +33,10 @@ npm run build
 - 修改 `package.json`中的`browserslist`
 
 - 添加 `.env` 文件来监控端口号和设定环境变量
+
+- 修改 `public\index.html`
+  - 新增 meta,禁止缩放
+
+## 测试模块
+
+基础页面建设

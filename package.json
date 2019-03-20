@@ -6,7 +6,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "<禁止运行>eject": "<禁止运行>react-scripts eject"
   },
   "dependencies": {
     "react": "^16.8.4",

@@ -12,6 +12,11 @@ const routes = [
     path: "/",
     name: "home",
     component: _import("/Home")
+  },
+  {
+    path: "/demo",
+    name: "Demo",
+    component: _import("/Demo")
   }
 ];
 

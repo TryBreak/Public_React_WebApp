@@ -5,7 +5,7 @@ import routes from "../views/routes";
 const route_list_view = () => {
   return routes.map((item, index) => {
     return (
-      <div key={item.name}>
+      <div key={index}>
         <Link to={item.path}>{item.name}</Link>
       </div>
     );

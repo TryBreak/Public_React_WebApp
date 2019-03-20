@@ -10,12 +10,12 @@ const _import = url => {
 const routes = [
   {
     path: "/",
-    name: "Home",
+    name: "首页",
     component: _import("/Home")
   },
   {
     path: "/home",
-    name: "Home-default",
+    name: "首页",
     component: _import("/Home")
   },
   {

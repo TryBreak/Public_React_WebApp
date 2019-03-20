@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 // import { HashRouter as Router, Route } from "react-router-dom";
 
-import Inbox from "./Inbox";
+import Inbox from "./inbox";
 import about from "./pages/demo/about-x";
 import home from "./pages/demo/home-x";
 

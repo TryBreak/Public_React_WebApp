@@ -10,8 +10,13 @@ const _import = url => {
 const routes = [
   {
     path: "/about",
-    name: "",
+    name: "about",
     component: _import("/demo/About.js")
+  },
+  {
+    path: "/home",
+    name: "home",
+    component: _import("/demo/Home.js")
   }
 ];
 

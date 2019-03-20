@@ -5,18 +5,23 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 // import { HashRouter as Router, Route } from "react-router-dom";
 //路由切换 -- end
 import routes from "../views/routes";
-
 import Inbox from "../config/Inbox";
-import about from "../views/demo/About";
-import home from "../views/demo/Home";
-
-console.log(routes);
-
+const route_list_view = () => {
+  return routes.map((item, index) => {
+    return (
+      <Route
+        key={item.name}
+        exact
+        path={item.path}
+        component={item.component}
+      />
+    );
+  });
+};
 const BaseRouter = () => (
   <Router>
     <Route exact path="/" component={Inbox} />
-    <Route exact path="/about" component={about} />
-    <Route exact path="/home" component={home} />
+    {route_list_view()}
   </Router>
 );
 

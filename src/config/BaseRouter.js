@@ -20,7 +20,7 @@ const route_list_view = () => {
 };
 const BaseRouter = () => (
   <Router>
-    <Route exact path="/" component={Inbox} />
+    <Route exact path="/inbox" component={Inbox} />
     {route_list_view()}
   </Router>
 );

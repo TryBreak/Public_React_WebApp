@@ -6,8 +6,8 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 //路由切换 -- end
 
 import Inbox from "../config/Inbox";
-import about from "../pages/demo/About";
-import home from "../pages/demo/Home";
+import about from "../view/demo/About";
+import home from "../view/demo/Home";
 
 const BaseRouter = () => (
   <Router>

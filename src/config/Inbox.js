@@ -12,13 +12,14 @@ const route_list_view = () => {
   });
 };
 class Inbox extends Component {
+  linkTo = () => {
+    this.props.history.push("home");
+  };
   render() {
     return (
       <div>
         {route_list_view()}
-        {/* <button onClick={() => this.props.history.push("about")}>
-          通过函数跳转
-        </button> */}
+        <button onClick={this.linkTo}>函数跳转至首页</button>
       </div>
     );
   }

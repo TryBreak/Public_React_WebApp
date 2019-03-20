@@ -4,10 +4,13 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 // import { HashRouter as Router, Route } from "react-router-dom";
 //路由切换 -- end
+import routes from "../views/routes";
 
 import Inbox from "../config/Inbox";
-import about from "../view/demo/About";
-import home from "../view/demo/Home";
+import about from "../views/demo/About";
+import home from "../views/demo/Home";
+
+console.log(routes);
 
 const BaseRouter = () => (
   <Router>

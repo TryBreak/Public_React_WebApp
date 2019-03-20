@@ -5,13 +5,13 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 // import { HashRouter as Router, Route } from "react-router-dom";
 //路由切换 -- end
 
-import Inbox from "../Inbox";
-import about from "../pages/demo/about-x";
-import home from "../pages/demo/home-x";
+import Inbox from "../config/Inbox";
+import about from "../pages/demo/About";
+import home from "../pages/demo/Home";
 
 const BaseRouter = () => (
   <Router>
-    <Route exact path="/" component={Inbox.default} />
+    <Route exact path="/" component={Inbox} />
     <Route exact path="/about" component={about} />
     <Route exact path="/home" component={home} />
   </Router>

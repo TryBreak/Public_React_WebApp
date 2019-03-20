@@ -8,7 +8,7 @@ class Inbox extends Component {
         <br />
         <Link to="/home">Home</Link>
         <br />
-        <button onClick={() => this.props.history.push("About")}>
+        <button onClick={() => this.props.history.push("about")}>
           通过函数跳转
         </button>
         <br />

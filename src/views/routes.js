@@ -15,7 +15,7 @@ const routes = [
   },
   {
     path: "/home",
-    name: "Home",
+    name: "Home-default",
     component: _import("/Home")
   },
   {

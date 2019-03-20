@@ -17,6 +17,11 @@ const routes = [
     path: "/home",
     name: "home",
     component: _import("/demo/Home.js")
+  },
+  {
+    path: "/home-index",
+    name: "home-index",
+    component: _import("/Home")
   }
 ];
 

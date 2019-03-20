@@ -1,5 +1,9 @@
 # 项目说明
 
+脚手架仓库地址 <https://github.com/facebook/create-react-app>
+
+官方文档 <https://facebook.github.io/create-react-app/>
+
 ## 运行方式
 
 ```bash
@@ -13,7 +17,7 @@ npm run start
 npm run build
 ```
 
-## 语法高亮和编辑器配置 VSCode 编辑器配置建议
+## 语法高亮和编辑器配置 `VSCode` 编辑器配置建议
 
 插件安装建议
 
@@ -21,3 +25,11 @@ npm run build
 - ES7 React/Redux
 - Prettier
 - Path Intellisense
+
+## 定制化
+
+根据 `react-creat-app`做了如下个性化定制
+
+- 修改 `package.json`中的`browserslist`
+
+- 添加 `.env` 文件来监控端口号和设定环境变量

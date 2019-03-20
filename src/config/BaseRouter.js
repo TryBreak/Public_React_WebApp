@@ -8,12 +8,7 @@ import Inbox from "../config/Inbox";
 const route_list_view = () => {
   return routes.map((item, index) => {
     return (
-      <Route
-        key={item.name}
-        exact
-        path={item.path}
-        component={item.component}
-      />
+      <Route key={index} exact path={item.path} component={item.component} />
     );
   });
 };

@@ -11,14 +11,12 @@ const routes = [
   {
     path: "/",
     name: "首页",
-    component: _import("/Home"),
-    children: false
+    component: _import("/Home")
   },
   {
     path: "/home",
     name: "首页",
-    component: _import("/Home"),
-    children: false
+    component: _import("/Home")
   },
   {
     path: "/demo",

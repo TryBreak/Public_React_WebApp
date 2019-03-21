@@ -8,7 +8,12 @@ console.log(routes);
 const route_list_view = () => {
   return routes.map((item, index) => {
     return (
-      <Route exact key={index} path={item.path} component={item.component} />
+      <Route
+        exact={!item.children}
+        key={index}
+        path={"/demo" + item.path}
+        component={item.component}
+      />
     );
   });
 };

@@ -9,12 +9,12 @@ const _import = url => {
 
 const routes = [
   {
-    path: "/demo/style_demo",
+    path: "/style_demo",
     name: "样式演示",
     component: _import("/StyleDemo")
   },
   {
-    path: "/demo/request_demo",
+    path: "/request_demo",
     name: "请求演示",
     component: _import("/RequestDemo")
   }

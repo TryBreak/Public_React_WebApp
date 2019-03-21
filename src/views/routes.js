@@ -25,8 +25,7 @@ const routes = [
     path: "/404",
     name: "404",
     title: "Not Found",
-    component: _import("/NotFound"),
-    children: true
+    component: _import("/NotFound")
   }
 ];
 

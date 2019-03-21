@@ -4,6 +4,7 @@ class Home extends Component {
     return (
       <div>
         <h1>这里是首页,欢迎光临 </h1>
+        <input type="file" name="file" />
       </div>
     );
   }

@@ -1,14 +1,11 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-
 import routes from "./routes";
-
 import RouterView from "../../config/RouterView";
 
 class Demo extends Component {
   render() {
     const { match } = this.props;
-
     return (
       <div className="Demo">
         <h2>Demo</h2>

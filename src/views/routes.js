@@ -18,6 +18,12 @@ const routes = [
     name: "Demo",
     component: _import("/Demo"),
     children: true
+  },
+  {
+    path: "/404",
+    name: "404",
+    component: _import("/NotFound"),
+    children: true
   }
 ];
 

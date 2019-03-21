@@ -6,21 +6,28 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Inbox from "../config/Inbox"; //页面集合全路由展示
 import routes from "../views/routes"; //页面配置文件
 import RouteView from "./RouteView"; //路由渲染文件
-import NotFound from "../views/NotFound"; //404页面
+
+import { inspect404 } from "../utils/inspectRouter";
 
 class App extends Component {
   componentDidMount() {
-    console.log("首次加载");
+    this.watchRouter();
   }
   componentWillUpdate(nextProps) {
-    console.log("全局的路由监听");
+    this.watchRouter();
   }
+  watchRouter = () => {
+    const { pathname } = this.props.history.location;
+    if (inspect404({ pathname, routes })) {
+    } else {
+      this.props.history.replace("/404");
+    }
+  };
   render() {
     return (
       <Switch>
         <Route exact path="/inbox" component={Inbox} />
         <RouteView routes={routes} />
-        <Route exact path="/404" component={NotFound} />
       </Switch>
     );
   }

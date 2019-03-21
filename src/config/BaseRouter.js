@@ -3,16 +3,18 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 // import { HashRouter as Router, Route } from "react-router-dom";
 //路由切换 -- end
-import routes from "../views/routes";
 import Inbox from "../config/Inbox";
-import RouterView from "./RouterView";
+
+import routes from "../views/routes";
+import RouteView from "./RouteView";
 
 class BaseRouter extends Component {
   render() {
+    console.log(this.props);
     return (
       <Router>
         <Route exact path="/inbox" component={Inbox} />
-        <RouterView routes={routes} />
+        <RouteView routes={routes} />
       </Router>
     );
   }

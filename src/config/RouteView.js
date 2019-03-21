@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import PropTypes from "prop-types";
 
-class RouterView extends Component {
+class RouteView extends Component {
   static propTypes = {
     match: PropTypes.object,
     routes: PropTypes.array
@@ -29,4 +29,4 @@ class RouterView extends Component {
     });
   }
 }
-export default RouterView;
+export default RouteView;

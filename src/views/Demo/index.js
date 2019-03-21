@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-// import routes from "./routes";
 import RouteView from "../../config/RouteView";
 
 class Demo extends Component {

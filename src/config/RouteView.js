@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import PropTypes from "prop-types";
 import routes from "../views/routes";
+
+//此处用来处理路由和子路由的组件渲染
+
 class RouteView extends Component {
   static propTypes = {
     match: PropTypes.object,
@@ -14,7 +17,6 @@ class RouteView extends Component {
   };
   findRoutes = () => {
     const { match } = this.props;
-
     const find = routes.find(item => {
       return match.path === item.path;
     });
@@ -24,6 +26,8 @@ class RouteView extends Component {
   };
   render() {
     const { match } = this.props;
+    console.log(match);
+
     let routeList = routes;
     const path = match.path;
     if (path) {

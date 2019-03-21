@@ -1,23 +1,23 @@
 import React from "react";
 import { Link, Route } from "react-router-dom";
 
-import demo_about from "./demo_about";
-import demo_home from "./demo_home";
+import StyleDemo from "./StyleDemo";
+import RequestDemo from "./RequestDemo";
 function Demo() {
   return (
     <div className="Demo">
       <h2>Demo</h2>
       <ul>
         <li>
-          <Link to="/demo/demo_about">demo_about-a</Link>
+          <Link to="/demo/style_demo">demo_about-a</Link>
         </li>
         <li>
-          <Link to="/demo/demo_home">demo_home-a</Link>
+          <Link to="/demo/request_demo">demo_home-a</Link>
         </li>
       </ul>
-      <Route exact path="/demo" render={demo_about} />
-      <Route exact path="/demo/demo_about" component={demo_about} />
-      <Route exact path="/demo/demo_home" component={demo_home} />
+      <Route exact path="/demo" render={StyleDemo} />
+      <Route exact path="/demo/style_demo" component={StyleDemo} />
+      <Route exact path="/demo/request_demo" component={RequestDemo} />
     </div>
     // ssssss
   );

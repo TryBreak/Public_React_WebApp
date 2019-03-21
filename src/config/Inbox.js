@@ -11,6 +11,7 @@ const route_list_view = () => {
     );
   });
 };
+
 class Inbox extends Component {
   linkTo = () => {
     this.props.history.push("home");

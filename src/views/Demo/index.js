@@ -1,25 +1,14 @@
 import React, { Component } from "react";
-import { Link, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import routes from "./routes";
 
-console.log(routes);
-
-const route_list_view = () => {
-  return routes.map((item, index) => {
-    return (
-      <Route
-        exact={!item.children}
-        key={index}
-        path={"/demo" + item.path}
-        component={item.component}
-      />
-    );
-  });
-};
+import RouterView from "../../config/RouterView";
 
 class Demo extends Component {
   render() {
+    const { match } = this.props;
+
     return (
       <div className="Demo">
         <h2>Demo</h2>
@@ -31,7 +20,7 @@ class Demo extends Component {
             <Link to="/demo/request_demo">request_demo-a</Link>
           </li>
         </ul>
-        {route_list_view()}
+        <RouterView match={match} routes={routes} />
       </div>
     );
   }

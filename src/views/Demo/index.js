@@ -4,13 +4,6 @@ import routes from "./routes";
 import RouteView from "../../config/RouteView";
 
 class Demo extends Component {
-  componentDidMount() {
-    console.log(1111);
-  }
-  componentWillUpdate(nextProps) {
-    console.log(2222222);
-  }
-
   render() {
     const { match } = this.props;
     return (

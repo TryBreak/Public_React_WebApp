@@ -3,10 +3,10 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // import { HashRouter as Router, Switch, Route } from "react-router-dom";
 //路由切换 -- end
-import Inbox from "../config/Inbox";
-import routes from "../views/routes";
-import RouteView from "./RouteView";
-import NotFound from "../views/NotFound";
+import Inbox from "../config/Inbox"; //页面集合全路由展示
+import routes from "../views/routes"; //页面配置文件
+import RouteView from "./RouteView"; //路由渲染文件
+import NotFound from "../views/NotFound"; //404页面
 
 class App extends Component {
   componentDidMount() {

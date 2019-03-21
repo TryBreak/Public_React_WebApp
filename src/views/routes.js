@@ -19,7 +19,9 @@ const routes = [
     name: "Demo",
     title: "演示",
     component: _import("/Demo"),
-    children: true
+    children: {
+      routes: _import("/Demo/routes")
+    }
   },
   {
     path: "/404",

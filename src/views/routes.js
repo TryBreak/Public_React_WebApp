@@ -9,11 +9,6 @@ const _import = url => {
 
 const routes = [
   {
-    path: "*",
-    name: "404",
-    component: _import("/NotFound")
-  },
-  {
     path: "/",
     name: "首页",
     component: _import("/Home")

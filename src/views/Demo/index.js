@@ -1,8 +1,14 @@
 import React from "react";
 import { Link, Route } from "react-router-dom";
 
-import StyleDemo from "./StyleDemo";
-import RequestDemo from "./RequestDemo";
+import routes from "./routes";
+
+const route_list_view = () => {
+  return routes.map((item, index) => {
+    return <Route key={index} path={item.path} component={item.component} />;
+  });
+};
+
 function Demo() {
   return (
     <div className="Demo">
@@ -15,9 +21,10 @@ function Demo() {
           <Link to="/demo/request_demo">request_demo-a</Link>
         </li>
       </ul>
-      <Route exact path="/demo" component={StyleDemo} />
+      {route_list_view()}
+      {/* <Route exact path="/demo" component={StyleDemo} />
       <Route exact path="/demo/style_demo" component={StyleDemo} />
-      <Route exact path="/demo/request_demo" component={RequestDemo} />
+      <Route exact path="/demo/request_demo" component={RequestDemo} /> */}
     </div>
     // ssssss
   );

@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Inbox from "../config/Inbox"; //页面集合全路由展示
 import routes from "../views/routes"; //页面配置文件
 import RouteView from "./RouteView"; //路由渲染文件
-import NotFound from "../views/NotFound"; //404页面
+// import NotFound from "../views/NotFound"; //404页面
 
 class App extends Component {
   componentDidMount() {
@@ -20,7 +20,6 @@ class App extends Component {
       <Switch>
         <Route exact path="/inbox" component={Inbox} />
         <RouteView routes={routes} />
-        <Route exact path="/404" component={NotFound} />
       </Switch>
     );
   }

@@ -11,17 +11,20 @@ const routes = [
   {
     path: "/",
     name: "首页",
-    component: _import("/Home")
+    component: _import("/Home"),
+    children: false
   },
   {
     path: "/home",
     name: "首页",
-    component: _import("/Home")
+    component: _import("/Home"),
+    children: false
   },
   {
     path: "/demo",
     name: "Demo",
-    component: _import("/Demo")
+    component: _import("/Demo"),
+    children: true
   }
 ];
 

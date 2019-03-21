@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import routes from "./routes";
+// import routes from "./routes";
 import RouteView from "../../config/RouteView";
 
 class Demo extends Component {
@@ -17,7 +17,7 @@ class Demo extends Component {
             <Link to="/demo/request_demo">request_demo-a</Link>
           </li>
         </ul>
-        <RouteView match={match} routes={routes} />
+        <RouteView match={match} />
       </div>
     );
   }

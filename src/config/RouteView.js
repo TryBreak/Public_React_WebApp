@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import PropTypes from "prop-types";
-
+import routes from "../views/routes";
 class RouteView extends Component {
   static propTypes = {
     match: PropTypes.object,
@@ -12,10 +12,24 @@ class RouteView extends Component {
       path: ""
     }
   };
+  findRoutes = () => {
+    const { match } = this.props;
+
+    const find = routes.find(item => {
+      return match.path === item.path;
+    });
+    if (find && find.children) {
+      return find.children.routes;
+    }
+  };
   render() {
-    const { routes, match } = this.props;
+    const { match } = this.props;
+    let routeList = routes;
     const path = match.path;
-    return routes.map((item, index) => {
+    if (path) {
+      routeList = this.findRoutes();
+    }
+    return routeList.map((item, index) => {
       return (
         <Route
           exact={!item.children}

@@ -13,20 +13,23 @@ class App extends Component {
   componentDidMount() {
     this.watchRouter();
   }
-  componentWillUpdate(nextProps) {
+  componentWillUpdate() {
     this.watchRouter();
   }
   watchRouter = () => {
     const { pathname } = this.props.history.location;
-    if (inspect404({ pathname, routes })) {
+    const inspectRouter = inspect404({ pathname, routes });
+    if (!!inspectRouter) {
     } else {
       this.props.history.replace("/404");
     }
+    const title = inspectRouter && inspectRouter.title;
+    window.document.title = title || "123";
   };
   render() {
     return (
       <Switch>
-        <Route exact path="/inbox" component={Inbox} />
+        <Route exact path="/inbox" title="123" component={Inbox} />
         <RouteView routes={routes} />
       </Switch>
     );

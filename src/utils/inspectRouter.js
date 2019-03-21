@@ -1,12 +1,12 @@
 export const inspect404 = ({ pathname, routes }) => {
   const nowPath = filter_path(pathname);
-  const find = routes.find((item, index) => {
+  const find = routes.find(item => {
     return nowPath === item.path;
   });
   if (nowPath === "/inbox") {
     return true;
   }
-  return !!find;
+  return find;
 };
 
 export function filter_path(path) {

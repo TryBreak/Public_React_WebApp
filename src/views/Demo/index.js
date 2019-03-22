@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import RouteView from "../../config/RouteView";
-import styles from "./index.less";
-console.log(styles);
+import styles from "./index.module.less";
 
 class Demo extends Component {
   render() {

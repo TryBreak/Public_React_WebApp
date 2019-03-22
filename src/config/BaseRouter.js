@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 //路由切换
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-// import { HashRouter as Router, Switch, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 //路由切换 -- end
 import Inbox from "../config/Inbox"; //页面集合全路由展示
 import routes from "../views/routes"; //页面配置文件

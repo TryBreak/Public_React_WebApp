@@ -1,4 +1,4 @@
-# 项目说明
+# one-react-app 项目说明
 
 脚手架仓库地址 <https://github.com/facebook/create-react-app>
 
@@ -58,8 +58,4 @@ npm run build
 
 样式演示模块
 
-## 重点说明
-
-webpack.config.dev.js # 开发环境配置
-webpack.config.prod.js # 生产环境配置
-webpackDevServer.config.js # 开发服务器配置
+请求模块

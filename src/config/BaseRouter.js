@@ -6,19 +6,30 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Inbox from "../config/Inbox"; //页面集合全路由展示
 import routes from "../views/routes"; //页面配置文件
 import RouteView from "./RouteView"; //路由渲染文件
-// import NotFound from "../views/NotFound"; //404页面
+import { project_detail } from "../config/constants";
+import { inspect404 } from "../utils/inspectRouter";
 
 class App extends Component {
   componentDidMount() {
-    console.log("首次加载");
+    this.watchRouter();
   }
-  componentWillUpdate(nextProps) {
-    console.log("全局的路由监听");
+  componentWillUpdate() {
+    this.watchRouter();
   }
+  watchRouter = () => {
+    const { pathname } = this.props.history.location;
+    const inspectRouter = inspect404({ pathname, routes });
+    if (!!inspectRouter) {
+    } else {
+      this.props.history.replace("/404");
+    }
+    const title = inspectRouter && inspectRouter.title;
+    window.document.title = title || project_detail.name;
+  };
   render() {
     return (
       <Switch>
-        <Route exact path="/inbox" component={Inbox} />
+        <Route exact path="/inbox" title="123" component={Inbox} />
         <RouteView routes={routes} />
       </Switch>
     );

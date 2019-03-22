@@ -40,6 +40,8 @@ npm run build
 
 - 新增 `react-router-dom` 实现路由跳转
 
+  - 采用配置文件的形式管理路由
+
 ## 测试模块
 
 基础页面建设

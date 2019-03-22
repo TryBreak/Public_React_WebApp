@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import routes from "../views/routes";
 
+console.log(routes);
+
 const route_list_view = () => {
   return routes.map((item, index) => {
     return (

@@ -19,7 +19,7 @@ class RouteView extends Component {
     const { match } = this.props;
     const pathArr = match.path.split("/");
 
-    console.log(pathArr);
+    // console.log(pathArr);
 
     const routeList = this.recursion(pathArr);
     // console.log("routeList", routeList);

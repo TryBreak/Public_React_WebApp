@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 import RouteView from "../../../config/RouteView";
 class StyleDemo extends Component {
   render() {
@@ -16,6 +16,11 @@ class StyleDemo extends Component {
           </li>
         </ul>
         <RouteView match={match} />
+        <Route
+          exact
+          path={match.path}
+          render={() => <h3>这里是三级路由首页首页哦</h3>}
+        />
       </div>
     );
   }

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 import RouteView from "../../config/RouteView";
 import styles from "./index.module.less";
 
@@ -18,6 +18,11 @@ class Demo extends Component {
           </li>
         </ul>
         <RouteView match={match} />
+        <Route
+          exact
+          path={match.path}
+          render={() => <h3>这里是demo首页哦</h3>}
+        />
       </div>
     );
   }

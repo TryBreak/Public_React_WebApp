@@ -4,7 +4,6 @@ import RouteView from "../../../config/RouteView";
 class StyleDemo extends Component {
   render() {
     const { match } = this.props;
-
     return (
       <div>
         <h1>这里是 StyleDemo ,欢迎光临 , 这里是二级路由 </h1>

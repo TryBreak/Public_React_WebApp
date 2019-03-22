@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import RouteView from "../../config/RouteView";
+import styles from "./index.less";
+console.log(styles);
 
 class Demo extends Component {
   render() {
     const { match } = this.props;
     return (
       <div className="Demo">
-        <h2>Demo</h2>
+        <h2 className={styles.title}>Demo</h2>
         <ul>
           <li>
             <Link to="/demo/style_demo">style_demo-a</Link>

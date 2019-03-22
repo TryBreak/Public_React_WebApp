@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import * as serviceWorker from "./serviceWorker";
 import "react-app-polyfill/ie9";
 import BaseRouter from "./config/BaseRouter";
-import "./assets/css/reset.css";
+import "./assets/style/reset.less";
 
 ReactDOM.render(<BaseRouter />, document.getElementById("root"));
 

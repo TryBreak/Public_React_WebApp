@@ -58,6 +58,8 @@ class RouteView extends Component {
   };
   render() {
     const { match } = this.props;
+    console.log(match);
+
     let routeList = this.findRoutes();
     const path = match.path;
     return routeList.map((item, index) => {

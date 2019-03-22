@@ -16,6 +16,7 @@ class App extends Component {
   componentWillUpdate() {
     this.watchRouter();
   }
+  //全局的路由变化监听
   watchRouter = () => {
     const { pathname } = this.props.history.location;
     const inspectRouter = inspect404({ pathname, routes });
@@ -29,7 +30,7 @@ class App extends Component {
   render() {
     return (
       <Switch>
-        <Route exact path="/inbox" title="123" component={Inbox} />
+        <Route exact path="/inbox" component={Inbox} />
         <RouteView routes={routes} />
       </Switch>
     );

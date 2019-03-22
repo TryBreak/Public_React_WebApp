@@ -44,6 +44,8 @@ npm run build
 
 - less 配置
 
+  - 开放 `eject`
+
 ## 测试模块
 
 基础页面建设
@@ -55,3 +57,9 @@ npm run build
 多级路由渲染规划
 
 样式演示模块
+
+## 重点说明
+
+webpack.config.dev.js # 开发环境配置
+webpack.config.prod.js # 生产环境配置
+webpackDevServer.config.js # 开发服务器配置

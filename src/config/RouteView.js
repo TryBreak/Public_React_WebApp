@@ -26,8 +26,6 @@ class RouteView extends Component {
   };
   render() {
     const { match } = this.props;
-    console.log(match);
-
     let routeList = routes;
     const path = match.path;
     if (path) {

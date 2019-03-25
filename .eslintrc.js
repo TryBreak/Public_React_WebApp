@@ -64,5 +64,29 @@ module.exports = {
     'brace-style': 'error',
     //拖尾逗号
     'comma-dangle': ['error', 'always'],
+    //正则表达式必须被括起来
+    'wrap-regex': 'error',
+    //不要省地方
+    'arrow-spacing': 'error',
+    //标记无效或缺失的 super() 调用
+    'constructor-super': 'error',
+    //操作符和箭头函数混用
+    'no-confusing-arrow': 'error',
+    //九年制调用 super() 之前使用 this 或 super
+    'no-this-before-super': 'error',
+    //不要玩花
+    'no-useless-computed-key': 'error',
+    //避免新手问题
+    'no-new-symbol': 'error',
+    //不要使用var
+    'no-var': 'error',
+    //简写
+    'object-shorthand': 'error',
+    //必须要有 yield
+    'require-yield': 'error',
+    //不要省地方
+    'rest-spread-spacing': ['error', 'always'],
   },
 };
+
+// 详细规则请查看 http://eslint.cn/docs/rules/

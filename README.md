@@ -46,6 +46,8 @@ npm run build
 
   - 开放 `eject`
 
+- eslint 配置
+
 ## 测试模块
 
 基础页面建设

@@ -1,8 +1,9 @@
 import { ajax } from '../utils/http';
-export const get_searchData = data => {
+export const userLogin = data => {
   return ajax({
-    url: '/api/search/all',
-    params: data,
-    method: 'get',
+    url: '/api/passport/login',
+    data,
+
+    method: 'post',
   });
 };

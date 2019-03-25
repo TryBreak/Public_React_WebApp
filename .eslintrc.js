@@ -84,7 +84,7 @@ module.exports = {
     //必须要有 yield
     'require-yield': 'error',
     //不要省地方
-    'rest-spread-spacing': ['error', 'always'],
+    'rest-spread-spacing': ['error', 'never'],
     //不要省括号
     curly: 'error',
     //switch

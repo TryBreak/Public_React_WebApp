@@ -13,10 +13,12 @@ import RouteView from './RouteView'; //路由渲染文件
 import { project_detail } from '../config/constants';
 import { inspect404 } from '../utils/inspectRouter';
 
-//加载请求
+//加载请求的设置
+import { $axios_set } from '../utils/http';
 class App extends Component {
-  getDefaultProps() {
-    console.log('set');
+  constructor(props) {
+    super(props);
+    $axios_set();
   }
   componentDidMount() {
     this.watchRouter();

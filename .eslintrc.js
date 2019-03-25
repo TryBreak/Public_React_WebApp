@@ -166,6 +166,27 @@ module.exports = {
     'no-void': 'error',
     //禁用 with 语句
     'no-with': 'error',
+    //要求使用 Error 对象作为 Promise 拒绝的原因
+    'prefer-promise-reject-errors': 'error',
+    //要求必须有基数 parseInt
+    radix: 'error',
+    //禁止使用不带 await 表达式的 async 函数
+    'require-await': 'error',
+    //var 必须在作用域顶部
+    'vars-on-top': 'error',
+    //需要把立即执行的函数包裹起来
+    'wrap-iife': ['error', 'outside'],
+    // if Yoda 条件
+    yoda: 'error',
+    //使用严格模式
+    strict: ['error', 'global'],
+    //禁止删除变量
+    'no-delete-var': 'error',
+    'no-shadow-restricted-names': 'error',
+    'no-undef': 'error',
+    'no-undefined': 'error',
+    'no-unused-vars': 'error',
+    'no-use-before-define': 'error',
   },
 };
 

@@ -1,23 +1,23 @@
-import React, { Component } from "react";
-import { Route } from "react-router-dom";
-import PropTypes from "prop-types";
-import routes from "../views/routes";
+import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import routes from '../views/routes';
 
 //此处用来处理路由和子路由的组件渲染
 
 class RouteView extends Component {
   static propTypes = {
-    match: PropTypes.object
+    match: PropTypes.object,
   };
   static defaultProps = {
     match: {
-      path: ""
-    }
+      path: '',
+    },
   };
   findRoutes = () => {
     //第一遍循环查找一层,第二遍循环查找二层,第三遍循环查找三层
     const { match } = this.props;
-    const pathArr = match.path.split("/");
+    const pathArr = match.path.split('/');
 
     // console.log(pathArr);
 
@@ -36,7 +36,7 @@ class RouteView extends Component {
       return returnRoutes;
     }
     function find() {
-      let path = "/" + pathArr[count];
+      let path = '/' + pathArr[count];
       // console.log(1111111111111);
       // console.log(path);
       // console.log(count);

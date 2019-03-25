@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import routes from "../views/routes";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import routes from '../views/routes';
 
 const route_list_view = () => {
   return routes.map((item, index) => {
@@ -14,7 +14,7 @@ const route_list_view = () => {
 
 class Inbox extends Component {
   linkTo = () => {
-    this.props.history.push("/asdasd");
+    this.props.history.push('/asdasd');
   };
   render() {
     return (

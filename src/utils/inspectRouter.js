@@ -3,12 +3,12 @@ export const inspect404 = ({ pathname, routes }) => {
   const find = routes.find(item => {
     return nowPath === item.path;
   });
-  if (nowPath === "/inbox") {
+  if (nowPath === '/inbox') {
     return true;
   }
   return find;
 };
 
 export function filter_path(path) {
-  return "/" + path.split("/")[1];
+  return '/' + path.split('/')[1];
 }

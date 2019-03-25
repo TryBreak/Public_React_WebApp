@@ -1,11 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import * as serviceWorker from "./serviceWorker";
-import "react-app-polyfill/ie9";
-import BaseRouter from "./config/BaseRouter";
-import "./assets/style/reset.less";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import * as serviceWorker from './serviceWorker';
+import 'react-app-polyfill/ie9';
+import BaseRouter from './config/BaseRouter';
+import './assets/style/reset.less';
 
-ReactDOM.render(<BaseRouter />, document.getElementById("root"));
+ReactDOM.render(<BaseRouter />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

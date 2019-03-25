@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { Link, Route } from "react-router-dom";
-import RouteView from "../../../config/RouteView";
+import React, { Component } from 'react';
+import { Link, Route } from 'react-router-dom';
+import RouteView from '../../../config/RouteView';
 class StyleDemo extends Component {
   render() {
     const { match } = this.props;

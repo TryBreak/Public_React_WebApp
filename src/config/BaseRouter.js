@@ -1,13 +1,13 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 //路由切换
 // import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 //路由切换 -- end
-import Inbox from "../config/Inbox"; //页面集合全路由展示
-import routes from "../views/routes"; //页面配置文件
-import RouteView from "./RouteView"; //路由渲染文件
-import { project_detail } from "../config/constants";
-import { inspect404 } from "../utils/inspectRouter";
+import Inbox from '../config/Inbox'; //页面集合全路由展示
+import routes from '../views/routes'; //页面配置文件
+import RouteView from './RouteView'; //路由渲染文件
+import { project_detail } from '../config/constants';
+import { inspect404 } from '../utils/inspectRouter';
 
 class App extends Component {
   componentDidMount() {
@@ -22,7 +22,7 @@ class App extends Component {
     const inspectRouter = inspect404({ pathname, routes });
     if (!!inspectRouter) {
     } else {
-      this.props.history.replace("/404");
+      this.props.history.replace('/404');
     }
     const title = inspectRouter && inspectRouter.title;
     window.document.title = title || project_detail.name;

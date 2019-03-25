@@ -1,3 +1,7 @@
+export const filter_path = path => {
+  return '/' + path.split('/')[1];
+};
+
 export const inspect404 = ({ pathname, routes }) => {
   const nowPath = filter_path(pathname);
   const find = routes.find(item => {
@@ -8,7 +12,3 @@ export const inspect404 = ({ pathname, routes }) => {
   }
   return find;
 };
-
-export function filter_path(path) {
-  return '/' + path.split('/')[1];
-}

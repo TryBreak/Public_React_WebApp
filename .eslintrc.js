@@ -17,10 +17,9 @@ module.exports = {
   },
   plugins: ['react', 'prettier'],
   rules: {
+    'prettier/prettier': 'error',
     //必须使用\n换行
     'linebreak-style': ['error', 'unix'],
-    //使用 .prettierrc 美化代码
-    'prettier/prettier': 'error',
     //使用单引号
     quotes: ['error', 'single'],
     //必须使用括号包裹箭头函数的参数
@@ -29,7 +28,7 @@ module.exports = {
     'generator-star-spacing': ['error', { before: false, after: true }],
     'no-debugger': 'error',
     //函数空格的问题
-    'space-before-function-paren': 'error',
+    // 'space-before-function-paren': 'error',
     //分号
     semi: ['error', 'always'],
     // 'semi-spacing': ['error', { before: true, after: true }],
@@ -63,7 +62,7 @@ module.exports = {
     //大括号风格
     'brace-style': 'error',
     //拖尾逗号
-    'comma-dangle': ['error', 'always'],
+    'comma-dangle': ['error', 'always-multiline'],
     //正则表达式必须被括起来
     'wrap-regex': 'error',
     //不要省地方
@@ -126,7 +125,7 @@ module.exports = {
     //禁止在全局范围使用变量和函数声明
     'no-implicit-globals': 'error',
     //禁止 this 关键字在类或类对象之外出现
-    'no-invalid-this': 'error',
+    // 'no-invalid-this': 'error',
     //禁用迭代器
     'no-iterator': 'error',
     'no-labels': 'error',

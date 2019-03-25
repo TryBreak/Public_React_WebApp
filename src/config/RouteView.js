@@ -37,11 +37,13 @@ class RouteView extends Component {
     }
     function find() {
       let path = '/' + pathArr[count];
-      // console.log(1111111111111);
-      // console.log(path);
-      // console.log(count);
-      // console.log(returnRoutes);
-      // console.log(111111111111);
+      /*
+       * console.log(1111111111111);
+       * console.log(path);
+       * console.log(count);
+       * console.log(returnRoutes);
+       * console.log(111111111111);
+       */
       for (let i = 0; i < returnRoutes.length; i++) {
         const el = returnRoutes[i];
         if (path === el.path) {

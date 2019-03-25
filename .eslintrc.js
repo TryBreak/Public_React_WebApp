@@ -50,5 +50,19 @@ module.exports = {
     'space-in-parens': ['error', 'always'],
     //对象属性排序
     'sort-keys': 'error',
+    //禁止使用嵌套的三元表达式
+    'no-nested-ternary': 'error',
+    //禁止混合缩进
+    'no-mixed-spaces-and-tabs': 'error',
+    //调用构造函数必须带括号
+    'new-parens': 'error',
+    //多行注释风格
+    'multiline-comment-style': ['error', 'starred-block'],
+    //this别名
+    'consistent-this': ['error', 'that'],
+    //大括号风格
+    'brace-style': 'error',
+    //拖尾逗号
+    'comma-dangle': ['error', 'always'],
   },
 };

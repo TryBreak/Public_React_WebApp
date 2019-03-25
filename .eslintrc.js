@@ -34,7 +34,7 @@ module.exports = {
     // 'semi-spacing': ['error', { before: true, after: true }],
     'semi-style': ['error', 'last'],
     //console
-    'no-console': ['error', { allow: ['warn', 'error', 'info'] }],
+    'no-console': ['warn', { allow: ['warn', 'error', 'info'] }],
     //禁用常量表达式
     'no-constant-condition': 'error',
     //禁止出现重复的键

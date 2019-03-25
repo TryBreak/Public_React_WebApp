@@ -13,7 +13,11 @@ import RouteView from './RouteView'; //路由渲染文件
 import { project_detail } from '../config/constants';
 import { inspect404 } from '../utils/inspectRouter';
 
+//加载请求
 class App extends Component {
+  getDefaultProps() {
+    console.log('set');
+  }
   componentDidMount() {
     this.watchRouter();
   }

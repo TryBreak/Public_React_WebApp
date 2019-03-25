@@ -24,7 +24,7 @@ module.exports = {
     //使用单引号
     quotes: ['error', 'single'],
     //必须使用括号包裹箭头函数的参数
-    'arrow-parens': ['error', 'always'],
+    // 'arrow-parens': ['error', 'always'],
     //强制 generator 函数
     'generator-star-spacing': ['error', { before: false, after: true }],
     'no-debugger': 'error',
@@ -32,10 +32,10 @@ module.exports = {
     'space-before-function-paren': 'error',
     //分号
     semi: ['error', 'always'],
-    'semi-spacing': ['error', { before: true, after: true }],
+    // 'semi-spacing': ['error', { before: true, after: true }],
     'semi-style': ['error', 'last'],
     //console
-    'no-console': ['error', { allow: ['warn', 'error'] }],
+    'no-console': ['error', { allow: ['warn', 'error', 'info'] }],
     //禁用常量表达式
     'no-constant-condition': 'error',
     //禁止出现重复的键
@@ -47,9 +47,9 @@ module.exports = {
     //构造函数首字母大写
     'new-cap': ['error', { newIsCap: true }],
     //括号内空格
-    'space-in-parens': ['error', 'always'],
+    // 'space-in-parens': ['error', 'always'],
     //对象属性排序
-    'sort-keys': 'error',
+    // 'sort-keys': 'error',
     //禁止使用嵌套的三元表达式
     'no-nested-ternary': 'error',
     //禁止混合缩进
@@ -93,7 +93,7 @@ module.exports = {
     //点点和操作符
     'dot-location': ['error', 'property'],
     //属性调用
-    'dot-notation': ['error', { allowKeywords: false }],
+    // 'dot-notation': ['error', { allowKeywords: false }],
     //恒等号
     eqeqeq: ['error', 'always'],
     //for-in 中必须判断
@@ -133,7 +133,7 @@ module.exports = {
     'no-lone-blocks': 'error',
     'no-loop-func': 'error',
     //魔术数字
-    'no-magic-numbers': 'error',
+    // 'no-magic-numbers': 'error',
     //多空格问题
     'no-multi-spaces': 'error',
     //多行字符串

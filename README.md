@@ -50,6 +50,8 @@ npm run build
 
   - 定制了团队最优的 eslint 配置
 
+- MobX 接入
+
 ## 模块 demo
 
 基础页面建设

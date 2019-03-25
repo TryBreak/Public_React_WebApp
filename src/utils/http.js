@@ -57,8 +57,6 @@ const ajax = param => {
     config.data = config.params;
     delete config.data;
   }
-  console.log(config);
-
   return service(config);
 };
 export { $axios_set_default, ajax };

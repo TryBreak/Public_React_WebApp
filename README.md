@@ -50,7 +50,7 @@ npm run build
 
   - 定制了团队最优的 eslint 配置
 
-- MobX 接入
+- Mobx 接入
 
 ## 模块 demo
 
@@ -65,3 +65,5 @@ npm run build
 样式演示模块
 
 请求模块
+
+Mobx 状态管理 Demo

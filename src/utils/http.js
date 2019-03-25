@@ -11,15 +11,16 @@ if (origin.indexOf('localhost') > -1) {
 }
 
 const service = axios.create();
-const $axios_set = () => {
+const $axios_set_default = () => {
   service.defaults.baseURL = baseUrl; //默认请求的 baseUrl
-  service.defaults.timeout = 10000; //超时10000
-  service.defaults.method = 'get'; //默认git请求
+  service.defaults.timeout = 8000; //超时 8 秒
+  service.defaults.method = 'get'; //默认get请求
+  axios.defaults.headers.common['Authorization'] = '123456789'; //设置token
+
+  //请求拦截
   service.interceptors.request.use(
     config => {
       console.info('请求开始');
-
-      //设置全局的请求状态
       return config;
     },
     error => {
@@ -27,30 +28,16 @@ const $axios_set = () => {
       return Promise.reject(error);
     }
   );
+
+  //响应拦截
   service.interceptors.response.use(
     response => {
-      const response_type = filter_responseType(
-        response.headers['content-type']
-      );
       console.info('请求结束');
-      if (response_type === 'excel') {
-        return '下载完成';
-      } else {
-        return response.data;
-      }
+      return response.data;
     },
     error => {
       return Promise.reject(error);
     }
   );
-
-  function filter_responseType(str) {
-    let type_str = str.split(';')[0];
-    if (type_str === 'application/vnd.ms-excel') {
-      return 'excel';
-    } else if (type_str === 'text/html') {
-      return 'html';
-    }
-  }
 };
-export { $axios_set, service };
+export { $axios_set_default, service };

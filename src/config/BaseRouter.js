@@ -14,11 +14,11 @@ import { project_detail } from '../config/constants';
 import { inspect404 } from '../utils/inspectRouter';
 
 //加载请求的设置
-import { $axios_set } from '../utils/http';
+import { $axios_set_default } from '../utils/http';
 class App extends Component {
   constructor(props) {
     super(props);
-    $axios_set();
+    $axios_set_default();
   }
   componentDidMount() {
     this.watchRouter();

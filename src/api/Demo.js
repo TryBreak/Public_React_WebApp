@@ -1,7 +1,8 @@
-import { service } from '../utils/http';
+import { ajax } from '../utils/http';
 export const get_searchData = data => {
-  return service({
+  return ajax({
     url: '/api/search/all',
-    data,
+    params: data,
+    method: 'get',
   });
 };

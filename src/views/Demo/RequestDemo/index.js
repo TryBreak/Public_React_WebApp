@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { get_searchData } from '../../../api/Demo';
 class RequestDemo extends Component {
   getSearch = () => {
-    get_searchData({ keyword: '阿松大' });
+    get_searchData({ keyword: '干' });
     console.info('请求~!');
   };
   render() {

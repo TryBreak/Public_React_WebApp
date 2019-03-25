@@ -56,7 +56,7 @@ module.exports = {
     //调用构造函数必须带括号
     'new-parens': 'error',
     //多行注释风格
-    'multiline-comment-style': ['error', 'starred-block'],
+    // 'multiline-comment-style': ['error', 'starred-block'],
     //this别名
     'consistent-this': ['error', 'that'],
     //大括号风格

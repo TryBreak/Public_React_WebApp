@@ -13,6 +13,12 @@ import RouteView from './RouteView'; //路由渲染文件
 import { project_detail } from '../config/constants';
 import { inspect404 } from '../utils/inspectRouter';
 
+// mobx
+import { Provider } from 'mobx-react';
+import * as store from '../store/index';
+import Mobx from '../mobx2';
+import Mobx2 from '../mobx_test';
+
 //加载请求的设置
 import { $axios_set_default } from '../utils/http';
 class App extends Component {
@@ -50,9 +56,14 @@ class App extends Component {
 class BaseRouter extends Component {
   render() {
     return (
-      <Router>
-        <Route exact component={App} />
-      </Router>
+      <Provider store={store}>
+        <Router>
+          <Route exact component={App} />
+          <h1>mobx的应用</h1>
+          <Mobx />
+          <Mobx2 />
+        </Router>
+      </Provider>
     );
   }
 }

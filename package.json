@@ -119,5 +119,5 @@
     "eslint-plugin-react": "^7.12.4",
     "prettier": "1.16.4"
   },
-  "proxy": "http://news-at.zhihu.com"
+  "proxy": "https://xchap.dacihai.com.cn"
 }

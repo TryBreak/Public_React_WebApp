@@ -86,7 +86,60 @@ module.exports = {
     'require-yield': 'error',
     //不要省地方
     'rest-spread-spacing': ['error', 'always'],
+    //不要省括号
+    curly: 'error',
+    //switch
+    'default-case': 'error',
+    //点点和操作符
+    'dot-location': ['error', 'property'],
+    //属性调用
+    'dot-notation': ['error', { allowKeywords: false }],
+    //恒等号
+    eqeqeq: ['error', 'always'],
+    //for-in 中必须判断
+    'guard-for-in': 'error',
+    //alert
+    'no-alert': 'error',
+    'no-caller': 'error',
+    //switch 词法声明
+    'no-case-declarations': 'error',
+    //消除正则则表达式歧义
+    'no-div-regex': 'error',
+    //结构不能为空
+    'no-empty-pattern': 'error',
+    //禁止 null 比较
+    'no-eq-null': 'error',
+    //禁止 eval
+    'no-eval': 'error',
+    //禁止扩展原生类型
+    'no-extend-native': 'error',
+    //禁止不必要的标签
+    'no-extra-label': 'error',
+    //switch
+    'no-fallthrough': 'error',
+    //金庸浮点小数
+    'no-floating-decimal': 'error',
+    //禁止改变原生对象的值
+    'no-global-assign': 'error',
+    //禁止使用短符号进行类型转换
+    'no-implicit-coercion': 'error',
+    //禁止在全局范围使用变量和函数声明
+    'no-implicit-globals': 'error',
+    //禁止 this 关键字在类或类对象之外出现
+    'no-invalid-this': 'error',
+    //禁用迭代器
+    'no-iterator': 'error',
+    'no-labels': 'error',
+    'no-lone-blocks': 'error',
+    'no-loop-func': 'error',
+    //魔术数字
+    'no-magic-numbers': 'error',
+    //多空格问题
+    'no-multi-spaces': 'error',
+    //多行字符串
+    'no-multi-str': 'error',
+    'no-new': 'error',
   },
 };
 
-// 详细规则请查看 http://eslint.cn/docs/rules/
+// 详细规则说明请查看 http://eslint.cn/docs/rules/

@@ -139,6 +139,33 @@ module.exports = {
     //多行字符串
     'no-multi-str': 'error',
     'no-new': 'error',
+    //禁用Function构造函数
+    'no-new-func': 'error',
+    //禁止原始包装实例
+    'no-new-wrappers': 'error',
+    //禁用八进制字面量
+    'no-octal': 'error',
+    //禁止对函数参数再赋值
+    'no-param-reassign': 'error',
+    //禁用__proto__
+    'no-proto': 'error',
+    //禁止多次声明同一个变量
+    'no-redeclare': 'error',
+    //return禁止赋值
+    'no-return-assign': ['error', 'always'],
+    //禁止return await
+    'no-return-await': 'err',
+    'no-script-url': 'error',
+    'no-self-assign': 'error',
+    'no-self-compare': 'error',
+    'no-sequences': 'error',
+    //禁止未使用过的表达式
+    'no-unused-expressions': 'error',
+    'no-useless-concat': 'error',
+    //void
+    'no-void': 'error',
+    //禁用 with 语句
+    'no-with': 'error',
   },
 };
 

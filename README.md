@@ -48,7 +48,9 @@ npm run build
 
 - eslint 配置
 
-## 测试模块
+  - 定制了团队最优的 eslint 配置
+
+## 模块 demo
 
 基础页面建设
 

@@ -154,7 +154,7 @@ module.exports = {
     //return禁止赋值
     'no-return-assign': ['error', 'always'],
     //禁止return await
-    'no-return-await': 'err',
+    'no-return-await': 'error',
     'no-script-url': 'error',
     'no-self-assign': 'error',
     'no-self-compare': 'error',

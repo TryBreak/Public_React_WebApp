@@ -15,7 +15,7 @@ class Mobx_1 extends Component {
   render() {
     return (
       <div>
-        <h1>Mobx Test</h1>
+        <h1>Mobx_1 Test</h1>
         <h2>homeStore.text: {this.props.store.homeStore.text}</h2>
         <h2>homeStore.num: {this.props.store.homeStore.num}</h2>
         <h3>otherStore.str: {this.props.store.otherStore.str}</h3>

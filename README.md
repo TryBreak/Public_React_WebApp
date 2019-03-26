@@ -26,6 +26,12 @@ npm run build
 - Prettier
 - Path Intellisense
 
+关闭修饰器警告需要在 setting.json 中加入设置:
+
+```json
+  "javascript.implicitProjectConfig.experimentalDecorators": true
+```
+
 ## 定制化
 
 根据 `react-creat-app`做了如下个性化定制

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import MobxTest1 from './MobxTest1';
-import MobxTest2 from './MobxTest2';
+import MobxTest1 from './template/MobxTest1';
+import MobxTest2 from './template/MobxTest2';
 class Demo extends Component {
   render() {
     return (

@@ -56,6 +56,13 @@ npm run build
 
   - 定制了基于团队最优的 eslint 配置
 
+## 状态管理和页面通信
+
+Mobx
+
+文档地址
+<https://cn.mobx.js.org/>
+
 ## 演示 demo
 
 基础页面建设
@@ -79,8 +86,9 @@ store.js
 文档地址
 <https://github.com/marcuswestin/store.js>
 
-## 状态管理和页面通信
+## 实用工具库
 
-Mobx
+Lodash
 
-<https://cn.mobx.js.org/>
+文档地址
+<https://www.lodashjs.com/>

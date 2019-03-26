@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import Mobx_1 from './Mobx_1';
-import Mobx_2 from './Mobx_2';
+import MobxTest1 from './MobxTest1';
+import MobxTest2 from './MobxTest2';
 class Demo extends Component {
   render() {
     return (
       <div className="Demo">
         <h2>状态管理演示</h2>
-        <Mobx_1 />
-        <Mobx_2 />
+        <MobxTest1 />
+        <MobxTest2 />
       </div>
     );
   }

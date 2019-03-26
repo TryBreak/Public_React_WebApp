@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import _ from 'lodash';
+
+console.info(_.defaults({ a: 1 }, { a: 3, b: 2 }));
+
 class JsStyleDemo extends Component {
   render() {
     return (

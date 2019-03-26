@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 @inject('store') // 将store注入到当前组件中
 @observer // 将该组件变成响应式组件
-class Mobx extends Component {
+class Mobx_1 extends Component {
   handelPlus = () => {
     this.props.store.homeStore.plus();
   };
@@ -30,4 +30,4 @@ class Mobx extends Component {
   }
 }
 
-export default Mobx;
+export default Mobx_1;

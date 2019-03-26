@@ -11,10 +11,13 @@ class Demo extends Component {
         <h2 className={styles.title}>Demo</h2>
         <ul>
           <li>
-            <Link to="/demo/style_demo">style_demo-a</Link>
+            <Link to="/demo/style_demo">style_demo</Link>
           </li>
           <li>
-            <Link to="/demo/request_demo">request_demo-a</Link>
+            <Link to="/demo/request_demo">request_demo</Link>
+          </li>
+          <li>
+            <Link to="/demo/mobox_demo">mobox_demo</Link>
           </li>
         </ul>
         <RouteView match={match} />

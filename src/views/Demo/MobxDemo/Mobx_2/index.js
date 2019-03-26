@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 @inject('store') // 将store注入到当前组件中
 @observer // 将该组件变成响应式组件
-class Mobx2 extends Component {
+class Mobx_2 extends Component {
   handleClick = () => {
     this.props.store.otherStore.getdata();
   };
@@ -18,4 +18,4 @@ class Mobx2 extends Component {
   }
 }
 
-export default Mobx2;
+export default Mobx_2;

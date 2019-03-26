@@ -34,7 +34,7 @@ npm run build
 
 ## 定制化
 
-根据 `react-creat-app`做了如下个性化定制
+基于 `react-creat-app` 做了如下个性化定制
 
 - 修改 `package.json`中的`browserslist`
 
@@ -42,7 +42,7 @@ npm run build
 
 - 修改 `public\index.html`
 
-  - 新增 meta,禁止缩放
+  - 新增 meta
 
 - 新增 `react-router-dom` 实现路由跳转
 
@@ -50,15 +50,13 @@ npm run build
 
 - less 配置
 
-  - 开放 `eject`
+  - 开放 `eject` webpack 配置 less , scss , css 的模块化设置 , scss 需要自己安装 node-sass
 
 - eslint 配置
 
-  - 定制了团队最优的 eslint 配置
+  - 定制了基于团队最优的 eslint 配置
 
-- Mobx 接入
-
-## 模块 demo
+## 演示 demo
 
 基础页面建设
 
@@ -73,3 +71,16 @@ npm run build
 请求模块
 
 Mobx 状态管理 Demo
+
+## 客户端本地存储
+
+store.js
+
+文档地址
+<https://github.com/marcuswestin/store.js>
+
+## 状态管理和页面通信
+
+Mobx
+
+<https://cn.mobx.js.org/>

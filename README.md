@@ -92,3 +92,20 @@ Lodash
 
 文档地址
 <https://www.lodashjs.com/>
+
+局部引用官方推荐命名
+
+```js
+import _ from 'lodash';
+import _ from 'lodash/core';
+import fp from 'lodash/fp';
+import array from 'lodash/array';
+import object from 'lodash/fp/object';
+import at from 'lodash/at';
+import curryN from 'lodash/fp/curryN';
+```
+
+注:不建议使用 React-lodash
+原因: 降低可读性,增加复杂性
+
+数据处理和视图尽量分开,数据处理完毕之后再进入视图

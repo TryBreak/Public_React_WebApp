@@ -7,7 +7,7 @@ class OthersStore {
     this.str = '这个值来自其他模块';
   }
   @action
-  getdata = () => {
+  getData = () => {
     fetch('api/comments/show?id=4199740256395164&page=1').then(res => {
       res.json().then(
         action(data => {

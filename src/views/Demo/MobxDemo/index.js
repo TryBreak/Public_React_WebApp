@@ -6,14 +6,8 @@ class Demo extends Component {
     return (
       <div className="Demo">
         <h2>状态管理演示</h2>
-        <ul>
-          <li>
-            <Mobx_1 />
-          </li>
-          <li>
-            <Mobx_2 />
-          </li>
-        </ul>
+        <Mobx_1 />
+        <Mobx_2 />
       </div>
     );
   }

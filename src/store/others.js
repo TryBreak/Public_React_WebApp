@@ -11,7 +11,6 @@ class OthersStore {
     fetch('api/comments/show?id=4199740256395164&page=1').then(res => {
       res.json().then(
         action(data => {
-          // console.log(data);
           this.str = data.msg;
         })
       );

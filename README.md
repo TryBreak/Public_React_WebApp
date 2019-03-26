@@ -26,13 +26,15 @@ npm run build
 - Prettier
 - Path Intellisense
 
-关闭修饰器警告需要在 setting.json 中加入设置:
+当前版本需要关闭修饰器警告
+
+在 setting.json 中加入设置:
 
 ```json
   "javascript.implicitProjectConfig.experimentalDecorators": true
 ```
 
-## 定制化
+## 脚手架定制化
 
 基于 `react-creat-app` 做了如下个性化定制
 
@@ -93,7 +95,7 @@ Lodash
 文档地址
 <https://www.lodashjs.com/>
 
-局部引用官方推荐命名
+引用官方推荐命名
 
 ```js
 import _ from 'lodash';
@@ -105,7 +107,7 @@ import at from 'lodash/at';
 import curryN from 'lodash/fp/curryN';
 ```
 
-注:不建议使用 React-lodash
-原因: 降低可读性,增加复杂性
+注:不建议使用 `React-lodash`
+原因: 会降低可读性,增加复杂性
 
 数据处理和视图尽量分开,数据处理完毕之后再进入视图

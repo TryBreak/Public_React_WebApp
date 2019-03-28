@@ -44,7 +44,7 @@ module.exports = {
     //jsx中使用单引号
     'jsx-quotes': ['error', 'prefer-double'],
     //构造函数首字母大写
-    'new-cap': ['error', { newIsCap: true }],
+    // 'new-cap': ['error', { newIsCap: true }],
     //括号内空格
     // 'space-in-parens': ['error', 'always'],
     //对象属性排序
@@ -58,7 +58,7 @@ module.exports = {
     //多行注释风格
     // 'multiline-comment-style': ['error', 'starred-block'],
     //this别名
-    'consistent-this': ['error', 'that'],
+    'consistent-this': ['error', '_this'],
     //大括号风格
     'brace-style': 'error',
     //拖尾逗号
@@ -98,7 +98,7 @@ module.exports = {
     //for-in 中必须判断
     'guard-for-in': 'error',
     //alert
-    'no-alert': 'error',
+    // 'no-alert': 'error',
     'no-caller': 'error',
     //switch 词法声明
     'no-case-declarations': 'error',

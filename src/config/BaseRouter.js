@@ -7,7 +7,7 @@ import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
 //路由切换 -- end
 
-import Inbox from '../config/Inbox'; //页面集合全路由展示
+import Inbox from './Inbox'; //页面集合全路由展示
 import routes from '../views/routes'; //页面配置文件
 import RouteView from './RouteView'; //路由渲染文件
 import { project_detail } from '../config/constants';
@@ -45,7 +45,7 @@ class App extends Component {
     return (
       <Switch>
         <Route exact path="/inbox" component={Inbox} />
-        <RouteView routes={routes} />
+        <RouteView />
       </Switch>
     );
   }

@@ -111,3 +111,9 @@ import curryN from 'lodash/fp/curryN';
 原因: 会降低可读性,增加复杂性
 
 数据处理和视图尽量分开,数据处理完毕之后再进入视图
+
+## style
+
+新增浏览器差异化处理文件
+
+normalize.css

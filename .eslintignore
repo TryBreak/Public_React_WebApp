@@ -1,5 +1,5 @@
-./build
-./config
-./node_modules
-./public
+/build/
+/config/
+/node_modules/
+/public/
 *.html

@@ -62,5 +62,4 @@ class BaseRouter extends Component {
     );
   }
 }
-
 export default BaseRouter;

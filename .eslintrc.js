@@ -177,8 +177,6 @@ module.exports = {
     'wrap-iife': ['error', 'outside'],
     // if Yoda 条件
     yoda: 'error',
-    //使用严格模式
-    strict: ['error', 'global'],
     //禁止删除变量
     'no-delete-var': 'error',
     'no-shadow-restricted-names': 'error',

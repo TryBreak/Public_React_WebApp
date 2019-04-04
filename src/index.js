@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as serviceWorker from './serviceWorker';
+import * as serviceWorker from './config/serviceWorker';
 import 'react-app-polyfill/ie9';
 import BaseRouter from './config/BaseRouter';
 import 'normalize.css';

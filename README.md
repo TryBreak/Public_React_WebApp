@@ -15,7 +15,14 @@ npm run start
 
 #生产环境打包发布
 npm run build
+
 ```
+
+> 如果采用 `BrowserRouter` 路由 则 `package.json`中的`homepage` 必须采用绝对路径,
+>
+> 如果采用 `HashRouter` 路由 则 `package.json` 中的打包路径配置为 `homepage:"."` 相对路径,
+>
+> 路由模式切换在 `/src/config/BaseRouter.js` 文件中
 
 ## 语法高亮和编辑器配置 `VSCode` 编辑器配置建议
 

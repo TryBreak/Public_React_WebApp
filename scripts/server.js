@@ -8,12 +8,13 @@ const staticPath = '../build';
 
 app.use(static(path.join(__dirname, staticPath)));
 
-app.use(async ctx => {
+app.use(async (ctx, next) => {
   const html = fs.readFileSync(
     path.join(__dirname, staticPath, 'index.html'),
     'utf-8'
   );
   ctx.body = html;
+  await next();
 });
 
 const port = 3380;

@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as serviceWorker from './config/serviceWorker';
+import * as serviceWorker from './serviceWorker';
 import 'react-app-polyfill/ie9';
-import BaseRouter from './config/BaseRouter';
+import BaseRouter from './BaseRouter';
 import 'normalize.css';
-import './assets/style/reset.less';
+import '../assets/style/reset.less';
 
 ReactDOM.render(<BaseRouter />, document.getElementById('root'));
 

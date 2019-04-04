@@ -1,6 +1,6 @@
 {
   "name": "one-react-app",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "browserslist": [
     "> 1%",
@@ -49,11 +49,6 @@
     "watchPlugins": [
       "/mnt/c/Mark/MyProject/Public_React_WebApp/node_modules/jest-watch-typeahead/filename.js",
       "/mnt/c/Mark/MyProject/Public_React_WebApp/node_modules/jest-watch-typeahead/testname.js"
-    ]
-  },
-  "babel": {
-    "presets": [
-      "react-app"
     ]
   },
   "dependencies": {
@@ -121,6 +116,11 @@
     "eslint-plugin-flowtype": "3.5.1",
     "eslint-plugin-import": "2.16.0",
     "eslint-plugin-jsx-a11y": "6.2.1"
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
   },
   "scripts": {
     "start": "node scripts/start.js",

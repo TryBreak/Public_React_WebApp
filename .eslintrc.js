@@ -182,7 +182,7 @@ module.exports = {
     'no-shadow-restricted-names': 'error',
     'no-undef': 'error',
     'no-undefined': 'error',
-    'no-unused-vars': 'error',
+    'no-unused-vars': 'warn',
     'no-use-before-define': 'error',
   },
 };

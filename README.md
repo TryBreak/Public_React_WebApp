@@ -16,6 +16,9 @@ npm run start
 #生产环境打包发布
 npm run build
 
+#打包之后的本地测试
+npm run local-serve
+
 ```
 
 > 如果采用 `BrowserRouter` 路由 则 `package.json`中的`homepage` 必须采用绝对路径,

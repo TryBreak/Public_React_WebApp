@@ -14,8 +14,8 @@ import { project_detail } from '../config/constants';
 import { inspect404 } from '../utils/inspectRouter';
 
 // Mobx
-// import { Provider } from 'mobx-react';
-// import * as store from '../store/index';
+import { Provider } from 'mobx-react';
+import * as store from '../store/index';
 
 //加载请求的设置
 import { $axios_set_default } from '../utils/http';
@@ -54,11 +54,11 @@ class App extends Component {
 class BaseRouter extends Component {
   render() {
     return (
-      // <Provider store={store}>
-      <Router>
-        <Route exact component={App} />
-      </Router>
-      // </Provider>
+      <Provider store={store}>
+        <Router>
+          <Route exact component={App} />
+        </Router>
+      </Provider>
     );
   }
 }

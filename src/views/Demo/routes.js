@@ -25,13 +25,13 @@ const routes = [
     title: '二级路由-请求演示',
     component: _import('/RequestDemo'),
   },
-  // {
-  //   path: '/mobox_demo',
-  //   name: 'Mobx演示',
-  //   description: '状态管理演示',
-  //   title: '二级路由-Mobox',
-  //   component: _import('/MobxDemo/'),
-  // },
+  {
+    path: '/mobox_demo',
+    name: 'Mobx演示',
+    description: '状态管理演示',
+    title: '二级路由-Mobox',
+    component: _import('/MobxDemo/'),
+  },
 ];
 
 export default routes;

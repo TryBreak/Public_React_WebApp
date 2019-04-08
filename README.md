@@ -127,3 +127,10 @@ import curryN from 'lodash/fp/curryN';
 新增浏览器差异化处理文件
 
 normalize.css
+
+如果要像这样模块化使用样式类 , 则 less 或者 css 或者 scss 文件必须以 `xxx.module.less/css/scss`这样命名 , 文件名中间必须包含 `.module`
+
+```js
+import styles from './index.module.less';
+<h2 className={styles.title}>Demo</h2>;
+```

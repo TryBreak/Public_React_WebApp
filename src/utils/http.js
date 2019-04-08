@@ -1,8 +1,19 @@
 import axios from 'axios';
 import Qs from 'qs';
 import store from 'store';
-let origin = window.location.origin;
-let baseUrl = origin; //设置默认 baseUrl 为域名
+
+//兼容 ie9
+if (!window.location.origin) {
+  window.location.origin =
+    window.location.protocol +
+    '//' +
+    window.location.hostname +
+    (window.location.port ? ':' + window.location.port : '');
+}
+//兼容 ie9 === end
+
+const origin = window.location.origin;
+let baseUrl = origin;
 if (origin.indexOf('localhost') > -1) {
   // baseUrl = origin;
 } else if (origin.indexOf('xxxx') > -1) {

@@ -98,7 +98,7 @@
     "webpack-manifest-plugin": "2.0.4",
     "workbox-webpack-plugin": "4.2.0",
     "axios": "^0.18.0",
-    "mobx": "^5.9.4",
+    "mobx": "^4.9.4",
     "mobx-react": "^5.4.3",
     "moment": "^2.24.0",
     "normalize.css": "^8.0.1",

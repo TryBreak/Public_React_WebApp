@@ -60,9 +60,9 @@ npm run local-serve
 
   - 采用配置文件的形式管理路由
 
-- less 配置
+- css 预处理器配置
 
-  - 开放 `eject` webpack 配置 less , scss , css 的模块化设置 , scss 需要自己安装 node-sass
+  - 配置 less , scss , css 的模块化设置 , scss 需要自己安装 node-sass
 
 - eslint 配置
 
@@ -128,9 +128,11 @@ import curryN from 'lodash/fp/curryN';
 
 normalize.css
 
-如果要像这样模块化使用样式类 , 则 less 或者 css 或者 scss 文件必须以 `xxx.module.less/css/scss`这样命名 , 文件名中间必须包含 `.module`
+样式模块化和组件局部作用域
 
 ```js
 import styles from './index.module.less';
 <h2 className={styles.title}>Demo</h2>;
 ```
+
+如果要像这样模块化使用样式类 , 则 less 或者 css 或者 scss 文件必须以 `xxx.module.less/css/scss` 的形式命名 , 文件名中间必须包含 `.module`

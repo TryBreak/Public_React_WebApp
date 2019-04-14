@@ -142,8 +142,6 @@ import styles from './index.module.less';
 ```js
 
   '@': path.resolve('src'),
-  '@src': path.resolve('src'),
-
   '@api': path.resolve('src/api'),
   '@assets': path.resolve('src/assets'),
   '@components': path.resolve('src/components'),

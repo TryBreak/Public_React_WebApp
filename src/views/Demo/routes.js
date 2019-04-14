@@ -1,11 +1,6 @@
-const _import = url => {
-  let Template = require('.' + url);
-  if (Template && Template.default) {
-    return Template.default;
-  } else {
-    console.error('页面路由组件引用出现了问题!! -- ' + url);
-  }
-};
+import _import from '@src/utils/_import';
+
+const basePath = '/Demo';
 
 const routes = [
   {
@@ -13,9 +8,9 @@ const routes = [
     name: '样式演示',
     description: '样式演示demo',
     title: '二级路由-样式演示',
-    component: _import('/StyleDemo'),
+    component: _import(basePath + '/StyleDemo'),
     children: {
-      routes: _import('/StyleDemo/routes'),
+      routes: _import(basePath + '/StyleDemo/routes'),
     },
   },
   {
@@ -23,14 +18,14 @@ const routes = [
     name: '请求演示',
     description: '请求演示demo',
     title: '二级路由-请求演示',
-    component: _import('/RequestDemo'),
+    component: _import(basePath + '/RequestDemo'),
   },
   {
     path: '/mobox_demo',
     name: 'Mobx演示',
     description: '状态管理演示',
     title: '二级路由-Mobox',
-    component: _import('/MobxDemo/'),
+    component: _import(basePath + '/MobxDemo/'),
   },
 ];
 

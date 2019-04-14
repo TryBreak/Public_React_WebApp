@@ -1,4 +1,4 @@
-import _import from '@src/utils/_import';
+import _import from '@/utils/_import';
 
 const basePath = '';
 

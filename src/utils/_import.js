@@ -1,5 +1,5 @@
 const _import = path => {
-  let Template = require('@src/views' + path);
+  let Template = require('@/views' + path);
   if (Template && Template.default) {
     return Template.default;
   } else {

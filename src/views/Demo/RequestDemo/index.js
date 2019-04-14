@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { userLogin, getBannerList, getTestTioken } from '../../../api/Demo';
+import { userLogin, getBannerList, getTestToken } from '../../../api/Demo';
 class RequestDemo extends Component {
   getSearch = () => {
     userLogin({ username: 'asdasd', password: '123123' });
@@ -7,8 +7,8 @@ class RequestDemo extends Component {
   getBannerList = () => {
     getBannerList();
   };
-  getTestTioken = () => {
-    getTestTioken();
+  getTestToken = () => {
+    getTestToken();
   };
   render() {
     return (
@@ -22,7 +22,7 @@ class RequestDemo extends Component {
         <br />
         <br />
         <br />
-        <button onClick={this.getTestTioken}>TestToken测试</button>
+        <button onClick={this.getTestToken}>TestToken测试</button>
       </div>
     );
   }

@@ -19,7 +19,7 @@ export const getBannerList = data => {
   });
 };
 
-export const getTestTioken = data => {
+export const getTestToken = data => {
   return ajax({
     url: '/test/user/token',
     data,

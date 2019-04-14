@@ -10,9 +10,18 @@ export const userLogin = async data => {
   store.set('token', req.data.token);
   return req;
 };
+
 export const getBannerList = data => {
   return ajax({
     url: '/api/u/home/banner/list',
+    data,
+    method: 'get',
+  });
+};
+
+export const getTestTioken = data => {
+  return ajax({
+    url: '/test/user/token',
     data,
     method: 'get',
   });

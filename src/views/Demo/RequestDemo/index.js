@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-import { userLogin, getBannerList } from '../../../api/Demo';
+import { userLogin, getBannerList, getTestTioken } from '../../../api/Demo';
 class RequestDemo extends Component {
   getSearch = () => {
     userLogin({ username: 'asdasd', password: '123123' });
   };
   getBannerList = () => {
     getBannerList();
+  };
+  getTestTioken = () => {
+    getTestTioken();
   };
   render() {
     return (
@@ -16,6 +19,10 @@ class RequestDemo extends Component {
         <br />
         <br />
         <button onClick={this.getBannerList}>get测试</button>
+        <br />
+        <br />
+        <br />
+        <button onClick={this.getTestTioken}>TestToken测试</button>
       </div>
     );
   }

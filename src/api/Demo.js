@@ -1,12 +1,13 @@
 import { ajax } from '../utils/http';
+import store from 'store';
+
 export const userLogin = async data => {
   const req = await ajax({
     url: '/api/passport/login',
     data,
     method: 'post',
   });
-  console.log(req);
-
+  store.set('token', req.data.token);
   return req;
 };
 export const getBannerList = data => {

@@ -4,7 +4,7 @@ import * as serviceWorker from './serviceWorker';
 import 'react-app-polyfill/ie9';
 import BaseRouter from './BaseRouter';
 import 'normalize.css';
-import '../assets/style/reset.less';
+import '@assets/style/reset.less';
 
 ReactDOM.render(<BaseRouter />, document.getElementById('root'));
 

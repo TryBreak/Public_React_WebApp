@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { userLogin, getBannerList, getTestToken } from '../../../api/Demo';
+import { userLogin, getBannerList, getTestToken } from '@api/Demo';
 class RequestDemo extends Component {
   getSearch = () => {
     userLogin({ username: 'asdasd', password: '123123' });

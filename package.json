@@ -130,7 +130,7 @@
     "build": "npm run remove:build & node scripts/build.js",
     "test": "node scripts/test.js",
     "local-serve": "node scripts/server.js",
-    "remove:build":"rm -rf ./build"
+    "remove:build": "rm -rf ./build"
   },
   "proxy": "http://192.168.2.29:50051/",
   "homepage": ""

@@ -160,10 +160,8 @@ import { userLogin, getBannerList, getTestToken } from '@api/Demo';
 import routes from '@pages/routes';
 ```
 
-css 中使用:
+css 中使用需要添加 `~` 为前缀:
 
 ```css
 @import '~@assets/style/global.less';
 ```
-
-> 因为 css 是靠 css-loader 解析的,所以以 `~` 为前缀视作依赖模块去解析

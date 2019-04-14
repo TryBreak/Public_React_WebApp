@@ -10,12 +10,12 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Inbox from './Inbox'; //页面集合全路由展示
 import routes from '@views/routes'; //页面配置文件
 import RouteView from './RouteView'; //路由渲染文件
-import { project_detail } from '../config/constants';
+import { project_detail } from '@config/constants';
 import { inspect404 } from '@utils/inspectRouter';
 
 // Mobx
 import { Provider } from 'mobx-react';
-import * as store from '../store/index';
+import * as store from '@store/index';
 
 //加载请求的设置
 import { $axios_set_default } from '@utils/http';

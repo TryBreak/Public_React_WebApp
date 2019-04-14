@@ -132,6 +132,5 @@
     "test": "node scripts/test.js",
     "local-serve": "node scripts/server.js"
   },
-  "xx-proxy": "http://192.168.2.29:50051",
   "homepage": ""
 }

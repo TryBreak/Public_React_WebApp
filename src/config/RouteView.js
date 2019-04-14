@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import routes from '../views/routes';
+import routes from '@pages/routes';
 
 //此处用来处理路由和子路由的组件渲染
 

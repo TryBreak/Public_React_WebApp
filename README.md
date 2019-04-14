@@ -146,8 +146,8 @@ import styles from './index.module.less';
   '@assets': path.resolve('src/assets'),
   '@components': path.resolve('src/components'),
   '@config': path.resolve('src/config'),
+  '@pages': path.resolve('src/pages'),
   '@store': path.resolve('src/store'),
   '@utils': path.resolve('src/utils'),
-  '@views': path.resolve('src/views'),
 
 ```

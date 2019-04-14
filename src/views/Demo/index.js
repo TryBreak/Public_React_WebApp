@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, Route } from 'react-router-dom';
-import RouteView from '@/config/RouteView';
+import RouteView from '@config/RouteView';
 import styles from './index.module.less';
 
 class Demo extends Component {

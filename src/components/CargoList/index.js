@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router';
-import styles from './index.less';
+import styles from './index.module.less';
 import PropTypes from 'prop-types';
 
 class CargoList extends React.Component {

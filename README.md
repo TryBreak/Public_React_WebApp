@@ -137,14 +137,17 @@ import styles from './index.module.less';
 
 如果要像这样模块化使用样式类 , 则 less 或者 css 或者 scss 文件必须以 `xxx.module.less/css/scss` 的形式命名 , 文件名中间必须包含 `.module`
 
-## 路径别名
+## js 模块引用的路径别名配置 `Webpack alias`
 
 ```js
 
-  "@src": path.resolve("src"),
-  "@components": path.resolve("src/components"),
-  "@views": path.resolve("src/views"),
-  "@utils": path.resolve("src/utils"),
-  "@assets": path.resolve("src/assets")
+  '@': path.resolve('src'),
+  '@src': path.resolve('src'),
+  '@assets': path.resolve('src/assets'),
+  '@components': path.resolve('src/components'),
+  '@config': path.resolve('src/config'),
+  '@store': path.resolve('src/store'),
+  '@utils': path.resolve('src/utils'),
+  '@views': path.resolve('src/views'),
 
 ```

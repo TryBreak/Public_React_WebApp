@@ -11,6 +11,10 @@ class CssStyleDemo extends Component {
         <img src={image14} alt="" />
         css使用
         <div className={styles.cover} />
+        less 函数单位计算
+        <div className={styles.lessBox}>
+          <div className={styles.font}>这里是文字测试</div>
+        </div>
       </div>
     );
   }

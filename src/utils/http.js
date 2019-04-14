@@ -1,7 +1,7 @@
 import axios from 'axios';
 import Qs from 'qs';
 import store from 'store';
-
+import { res_dispose } from './res_dispose';
 //兼容 ie9
 if (!window.location.origin) {
   window.location.origin =
@@ -42,7 +42,9 @@ const $axios_set_default = () => {
   service.interceptors.response.use(
     response => {
       // console.info('请求结束');
-      return response.data;
+      const data = response.data;
+      res_dispose(data);
+      return data;
     },
     error => {
       return Promise.reject(error);
@@ -51,7 +53,6 @@ const $axios_set_default = () => {
 };
 const ajax = param => {
   const config = {
-    ...param,
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
       Authorization: 'Bearer ' + store.get('token'),
@@ -62,6 +63,7 @@ const ajax = param => {
         return param;
       },
     ],
+    ...param,
   };
   //请求参数转换
   if (config.method === 'get' || !config.method) {

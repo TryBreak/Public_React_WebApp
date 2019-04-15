@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-04-15 20:07:52
+ * @LastEditTime: 2019-04-15 20:28:32
  */
 export const filter_path = path => {
   return '/' + path.split('/')[1];
@@ -47,8 +47,21 @@ export const recursion = (pathArr, routes) => {
   }
 };
 
-export const inspectRouter = ({ pathname, routes }) => {
+export const inspectRouter = ({ pathname, routes, isNowPath }) => {
   const pathArr = pathname.split('/');
   const routeList = recursion(pathArr, routes);
-  return routeList;
+  if (isNowPath) {
+    const nowPath = '/' + pathArr[pathArr.length - 1];
+    let nowRouter = '';
+    for (let i = 0; i < routeList.length; i++) {
+      const el = routeList[i];
+      if (el.path === nowPath) {
+        nowRouter = el;
+        break;
+      }
+    }
+    return nowRouter;
+  } else {
+    return routeList;
+  }
 };

@@ -23,12 +23,9 @@
 }
 
 /*----- margin -----*/
-.m(@t, @r, @b, @l:@r) {
+.m(@t, @r:@t, @b:@t, @l:@r) {
   margin: unit(@t / @htmlFontSize, rem) unit(@r / @htmlFontSize, rem)
     unit(@b / @htmlFontSize, rem) unit(@l / @htmlFontSize, rem);
-}
-.m2(@tb, @lr) {
-  margin: unit(@tb / @htmlFontSize, rem) unit(@lr / @htmlFontSize, rem);
 }
 .m_center(@px) {
   margin: unit(@px / @htmlFontSize, rem) auto;
@@ -47,12 +44,9 @@
 }
 
 /*----- padding -----*/
-.p(@t, @r, @b, @l:@r) {
+.p(@t, @r:@t, @b:@t, @l:@r) {
   padding: unit(@t / @htmlFontSize, rem) unit(@r / @htmlFontSize, rem)
     unit(@b / @htmlFontSize, rem) unit(@l / @htmlFontSize, rem);
-}
-.p2(@tb, @lr) {
-  padding: unit(@tb / @htmlFontSize, rem) unit(@lr / @htmlFontSize, rem);
 }
 .pt(@px) {
   padding-top: unit(@px / @htmlFontSize, rem);

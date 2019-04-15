@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-04-15 20:44:24
+ * @LastEditTime: 2019-04-15 20:53:34
  */
 import routes from '@pages/routes';
 
@@ -52,6 +52,7 @@ export const recursion = pathArr => {
 export const inspectRouter = ({ pathname, isNowPath }) => {
   const pathArr = pathname.split('/');
   const routeList = recursion(pathArr);
+
   if (isNowPath) {
     const nowPath = '/' + pathArr[pathArr.length - 1];
     let nowRouter = '';

@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-04-15 20:53:34
+ * @LastEditTime: 2019-04-15 20:54:39
  */
 import routes from '@pages/routes';
 
@@ -56,6 +56,7 @@ export const inspectRouter = ({ pathname, isNowPath }) => {
   if (isNowPath) {
     const nowPath = '/' + pathArr[pathArr.length - 1];
     let nowRouter = '';
+    //这里待完善
     for (let i = 0; i < routeList.length; i++) {
       const el = routeList[i];
       if (el.path === nowPath) {

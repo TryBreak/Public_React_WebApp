@@ -1,9 +1,10 @@
+/* eslint-disable no-console */
 /*
  * @LastEditors: Mark
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-04-15 19:32:43
+ * @LastEditTime: 2019-04-15 19:58:02
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -13,8 +14,10 @@ import BaseRouter from './BaseRouter';
 import 'normalize.css';
 import '@assets/style/reset.less';
 
-console.info(`当前版本:${process.env.REACT_APP_VERSION}`);
-window.document.title = process.env.REACT_APP_PROJECT_NAME;
+console.log(
+  `%c当前程序版本--${process.env.REACT_APP_VERSION}`,
+  'font-size:10;color:green;font-weight:bold;'
+);
 
 ReactDOM.render(<BaseRouter />, document.getElementById('root'));
 

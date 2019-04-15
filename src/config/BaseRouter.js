@@ -1,3 +1,10 @@
+/*
+ * @LastEditors: Mark
+ * @Description: In User Settings Edit
+ * @Author: Mark
+ * @Date: 2019-04-08 11:33:38
+ * @LastEditTime: 2019-04-15 19:14:54
+ */
 import React, { Component } from 'react';
 
 //路由切换
@@ -39,7 +46,9 @@ class App extends Component {
       this.props.history.replace('/404');
     }
     const title = inspectRouter && inspectRouter.title;
-    window.document.title = title || project_detail.name;
+    if (title) {
+      window.document.title = title;
+    }
   };
   render() {
     return (

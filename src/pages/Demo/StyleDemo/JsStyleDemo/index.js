@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-04-15 23:55:49
+ * @LastEditTime: 2019-04-15 23:56:39
  */
 import React, { Component } from 'react';
 import { fondRoute } from '@utils/inspectRouter.js';
@@ -14,7 +14,7 @@ class JsStyleDemo extends Component {
   fondRoute = () => {
     const path = '/demo';
     const route = fondRoute(path);
-    console.log(route);
+    console.info(route);
   };
   render() {
     return (

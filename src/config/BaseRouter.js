@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-04-15 22:19:18
+ * @LastEditTime: 2019-04-15 23:59:38
  */
 import React, { Component } from 'react';
 
@@ -17,7 +17,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Inbox from './Inbox'; //页面集合全路由展示
 import RouteView from './RouteView'; //路由渲染文件
 import { project_detail } from '@config/constants';
-import { inspect404, inspectRouter } from '@utils/inspectRouter';
+import { fondRoute, inspect404, inspectRouter } from '@utils/inspectRouter';
 
 // Mobx
 import { Provider } from 'mobx-react';
@@ -38,12 +38,11 @@ class App extends Component {
     this.watchRouter();
   }
   titleAnd404 = pathname => {
-    const is404 = inspect404({ pathname });
-    if (Boolean(is404)) {
+    const nowRouter = fondRoute(pathname);
+    if (nowRouter) {
     } else {
       this.props.history.replace('/404');
     }
-    const nowRouter = inspectRouter({ pathname, isNowPath: true });
     const title = nowRouter && nowRouter.title;
     if (title) {
       window.document.title = title || project_detail.name;

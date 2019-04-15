@@ -3,12 +3,11 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-04-15 20:08:38
+ * @LastEditTime: 2019-04-15 20:34:36
  */
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import routes from '@pages/routes';
 import { inspectRouter } from '@utils/inspectRouter.js';
 //此处用来处理路由和子路由的组件渲染
 
@@ -24,7 +23,7 @@ class RouteView extends Component {
   findRoutes = () => {
     //第一遍循环查找一层,第二遍循环查找二层,第三遍循环查找三层
     const { match } = this.props;
-    return inspectRouter({ pathname: match.path, routes });
+    return inspectRouter({ pathname: match.path });
   };
   render() {
     const { match } = this.props;

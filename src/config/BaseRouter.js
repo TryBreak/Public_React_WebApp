@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-04-15 20:30:08
+ * @LastEditTime: 2019-04-15 20:32:06
  */
 import React, { Component } from 'react';
 
@@ -41,12 +41,12 @@ class App extends Component {
   //全局的路由变化监听
   watchRouter = () => {
     const { pathname } = this.props.history.location;
-    const is404 = inspect404({ pathname, routes });
+    const is404 = inspect404({ pathname });
     if (Boolean(is404)) {
     } else {
       this.props.history.replace('/404');
     }
-    const nowRouter = inspectRouter({ pathname, routes, isNowPath: true });
+    const nowRouter = inspectRouter({ pathname, isNowPath: true });
     const title = nowRouter && nowRouter.title;
     if (title) {
       window.document.title = title || project_detail.name;

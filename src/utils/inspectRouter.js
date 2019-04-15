@@ -3,13 +3,15 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-04-15 20:28:32
+ * @LastEditTime: 2019-04-15 20:34:14
  */
+import routes from '@pages/routes';
+
 export const filter_path = path => {
   return '/' + path.split('/')[1];
 };
 
-export const inspect404 = ({ pathname, routes }) => {
+export const inspect404 = ({ pathname }) => {
   const nowPath = filter_path(pathname);
   const find = routes.find(item => {
     return nowPath === item.path;
@@ -20,7 +22,7 @@ export const inspect404 = ({ pathname, routes }) => {
   return find;
 };
 
-export const recursion = (pathArr, routes) => {
+export const recursion = pathArr => {
   const degree = pathArr.length;
   let returnRoutes = routes;
   let count = 0;
@@ -47,9 +49,9 @@ export const recursion = (pathArr, routes) => {
   }
 };
 
-export const inspectRouter = ({ pathname, routes, isNowPath }) => {
+export const inspectRouter = ({ pathname, isNowPath }) => {
   const pathArr = pathname.split('/');
-  const routeList = recursion(pathArr, routes);
+  const routeList = recursion(pathArr);
   if (isNowPath) {
     const nowPath = '/' + pathArr[pathArr.length - 1];
     let nowRouter = '';

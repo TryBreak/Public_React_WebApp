@@ -3,12 +3,28 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-04-15 20:54:39
+ * @LastEditTime: 2019-04-15 23:55:17
  */
 import routes from '@pages/routes';
 
 export const getMainRoute = path => {
   return '/' + path.split('/')[1];
+};
+
+export const splitPath = path => {
+  const pathArr = [];
+  const path_split = path.split('/');
+  if (path === '/') {
+    pathArr.push('/');
+    return pathArr;
+  }
+  for (let i = 0; i < path_split.length; i++) {
+    const el = path_split[i];
+    if (el) {
+      pathArr.push('/' + el);
+    }
+  }
+  return pathArr;
 };
 
 export const inspect404 = ({ pathname }) => {
@@ -24,6 +40,7 @@ export const inspect404 = ({ pathname }) => {
 
 export const recursion = pathArr => {
   const degree = pathArr.length;
+
   let returnRoutes = routes;
   let count = 0;
   if (degree === 1) {
@@ -39,6 +56,7 @@ export const recursion = pathArr => {
       if (path === el.path) {
         if (el.children && el.children.routes) {
           returnRoutes = el.children.routes;
+          break;
         }
       }
     }
@@ -49,23 +67,55 @@ export const recursion = pathArr => {
   }
 };
 
-export const inspectRouter = ({ pathname, isNowPath }) => {
+export const inspectRouter = ({ pathname }) => {
   const pathArr = pathname.split('/');
   const routeList = recursion(pathArr);
 
-  if (isNowPath) {
-    const nowPath = '/' + pathArr[pathArr.length - 1];
-    let nowRouter = '';
-    //这里待完善
+  return routeList;
+};
+
+export const fondRoute = pathname => {
+  const pathArr = splitPath(pathname);
+  let nowRoutes = '';
+  const degree = pathArr.length;
+  let count = 0;
+
+  const firstPath = pathArr[0];
+  for (let i = 0; i < routes.length; i++) {
+    const el = routes[i];
+    if (el.path === firstPath) {
+      nowRoutes = el;
+      break;
+    }
+  }
+  if (degree === 1) {
+    return returnData();
+  } else if (nowRoutes) {
+    find();
+  }
+
+  function find() {
+    const path = pathArr[count];
+    const routeList = nowRoutes.children && nowRoutes.children.routes;
     for (let i = 0; i < routeList.length; i++) {
       const el = routeList[i];
-      if (el.path === nowPath) {
-        nowRouter = el;
+      if (el.path === path) {
+        nowRoutes = el;
         break;
+      } else {
       }
     }
-    return nowRouter;
-  } else {
-    return routeList;
+    count++;
+    count < degree && find();
+  }
+
+  return returnData();
+
+  function returnData() {
+    if (nowRoutes.path === pathArr[pathArr.length - 1]) {
+      return nowRoutes;
+    } else {
+      return false;
+    }
   }
 };

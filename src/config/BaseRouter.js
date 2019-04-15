@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-04-15 20:49:43
+ * @LastEditTime: 2019-04-15 22:19:18
  */
 import React, { Component } from 'react';
 
@@ -44,8 +44,6 @@ class App extends Component {
       this.props.history.replace('/404');
     }
     const nowRouter = inspectRouter({ pathname, isNowPath: true });
-    console.log(nowRouter);
-
     const title = nowRouter && nowRouter.title;
     if (title) {
       window.document.title = title || project_detail.name;

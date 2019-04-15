@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-04-15 20:32:06
+ * @LastEditTime: 2019-04-15 20:43:57
  */
 import React, { Component } from 'react';
 
@@ -15,7 +15,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 //路由切换 -- end
 
 import Inbox from './Inbox'; //页面集合全路由展示
-import routes from '@pages/routes'; //页面配置文件
 import RouteView from './RouteView'; //路由渲染文件
 import { project_detail } from '@config/constants';
 import { inspect404, inspectRouter } from '@utils/inspectRouter';

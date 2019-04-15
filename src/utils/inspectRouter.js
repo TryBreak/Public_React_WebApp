@@ -3,16 +3,16 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-04-15 20:34:14
+ * @LastEditTime: 2019-04-15 20:44:24
  */
 import routes from '@pages/routes';
 
-export const filter_path = path => {
+export const getMainRoute = path => {
   return '/' + path.split('/')[1];
 };
 
 export const inspect404 = ({ pathname }) => {
-  const nowPath = filter_path(pathname);
+  const nowPath = getMainRoute(pathname);
   const find = routes.find(item => {
     return nowPath === item.path;
   });

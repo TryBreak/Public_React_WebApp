@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-04-15 23:55:17
+ * @LastEditTime: 2019-04-16 00:02:12
  */
 import routes from '@pages/routes';
 
@@ -11,6 +11,7 @@ export const getMainRoute = path => {
   return '/' + path.split('/')[1];
 };
 
+//将路径切分为标准数组
 export const splitPath = path => {
   const pathArr = [];
   const path_split = path.split('/');
@@ -74,6 +75,7 @@ export const inspectRouter = ({ pathname }) => {
   return routeList;
 };
 
+//匹配和查找路由,返回路由的配置信息
 export const fondRoute = pathname => {
   const pathArr = splitPath(pathname);
   let nowRoutes = '';

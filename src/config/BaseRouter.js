@@ -3,21 +3,21 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-04-16 00:00:26
+ * @LastEditTime: 2019-04-17 10:37:28
  */
 import React, { Component } from 'react';
 
 //路由切换
 
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-// import { HashRouter as Router, Switch, Route } from 'react-router-dom';
+// import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
 //路由切换 -- end
 
 import Inbox from './Inbox'; //页面集合全路由展示
 import RouteView from './RouteView'; //路由渲染文件
 import { project_detail } from '@config/constants';
-import { fondRoute, inspect404, inspectRouter } from '@utils/inspectRouter';
+import { fondRoute, splitPath } from '@utils/inspectRouter';
 
 // Mobx
 import { Provider } from 'mobx-react';
@@ -39,8 +39,9 @@ class App extends Component {
   }
   titleAnd404 = pathname => {
     const nowRouter = fondRoute(pathname);
+    const nowPath = splitPath(pathname);
     if (nowRouter) {
-    } else {
+    } else if (nowPath[0] !== '/inbox') {
       this.props.history.replace('/404');
     }
     const title = nowRouter && nowRouter.title;

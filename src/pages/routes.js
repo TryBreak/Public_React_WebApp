@@ -1,3 +1,10 @@
+/*
+ * @LastEditors: Mark
+ * @Description: In User Settings Edit
+ * @Author: Mark
+ * @Date: 2019-04-08 11:33:38
+ * @LastEditTime: 2019-04-17 10:38:01
+ */
 import _import from '@utils/_import';
 
 const basePath = '';
@@ -12,6 +19,26 @@ const routes = [
   },
   {
     path: '/demo',
+    name: 'Demo',
+    description: '这里是演示页面',
+    title: '演示',
+    component: _import(basePath + '/Demo'),
+    children: {
+      routes: _import(basePath + '/Demo/routes'),
+    },
+  },
+  {
+    path: '/demo_test1',
+    name: 'Demo',
+    description: '这里是演示页面',
+    title: '演示',
+    component: _import(basePath + '/Demo'),
+    children: {
+      routes: _import(basePath + '/Demo/routes'),
+    },
+  },
+  {
+    path: '/demo_test2',
     name: 'Demo',
     description: '这里是演示页面',
     title: '演示',

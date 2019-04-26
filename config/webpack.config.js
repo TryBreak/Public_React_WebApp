@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-04-26 22:43:33
+ * @LastEditTime: 2019-04-26 22:45:56
  */
 const fs = require('fs');
 const path = require('path');
@@ -275,13 +275,7 @@ module.exports = function (webpackEnv) {
         'react-native': 'react-native-web',
 
         '@': path.resolve('src'),
-        // '@/api': path.resolve('src/api'),
-        // '@/assets': path.resolve('src/assets'),
-        // '@/components': path.resolve('src/components'),
-        // '@/config': path.resolve('src/config'),
-        // '@/pages': path.resolve('src/pages'),
-        // '@/store': path.resolve('src/store'),
-        // '@/utils': path.resolve('src/utils'),
+
       },
       plugins: [
         // Adds support for installing with Plug'n'Play, leading to faster installs and adding

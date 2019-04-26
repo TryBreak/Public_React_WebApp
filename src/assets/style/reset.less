@@ -1,3 +1,5 @@
+@import './global.less';
+
 html,
 body {
   margin: 0;
@@ -15,8 +17,8 @@ code {
 }
 
 html {
-  font-size: 100px;
-}
-body {
-  font-size: 16px;
+  font-size: @htmlFontSize;
+  body {
+    .fs(18);
+  }
 }

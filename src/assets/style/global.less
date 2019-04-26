@@ -59,10 +59,15 @@
 }
 
 /*----- padding -----*/
-.p(@t, @r:@t, @b:@t, @l:@r) {
+.p(@t, @r:@t, @b:@t, @l:@r) when (@r > 0) {
   padding: unit(@t / @htmlFontSize, rem) unit(@r / @htmlFontSize, rem)
     unit(@b / @htmlFontSize, rem) unit(@l / @htmlFontSize, rem);
 }
+
+.p(@t, @r:@t, @b:@t, @l:@r) when (@r = auto) {
+  padding: unit(@t / @htmlFontSize, rem) auto;
+}
+
 .pt(@px) {
   padding-top: unit(@px / @htmlFontSize, rem);
 }

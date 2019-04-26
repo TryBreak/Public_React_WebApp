@@ -126,14 +126,21 @@
 }
 // 多行文字隐藏显示...
 
-.box-vertical {
-  /*! autoprefixer: off */
-  -webkit-box-orient: vertical;
-}
 .multi_fs_overflow(@num) {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: @num;
-  .box-vertical();
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
 }
+
+// .multi_fs_overflow(@num) {
+//   overflow: hidden;
+//   display: -webkit-box;
+//   text-overflow: ellipsis;
+//   -webkit-line-clamp: @num;
+//   /*! autoprefixer: off */
+//   -webkit-box-orient: vertical;
+//   /* autoprefixer: on */
+// }

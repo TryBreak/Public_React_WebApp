@@ -126,11 +126,10 @@
 }
 // 多行文字隐藏显示...
 .multi_fs_overflow(@num) {
+  /*! autoprefixer: ignore next */
   overflow: hidden;
-  display: -webkit-box;
   text-overflow: ellipsis;
-  -webkit-line-clamp: @num;
-  /*! autoprefixer: off */
+  display: -webkit-box;
   -webkit-box-orient: vertical;
-  /* autoprefixer: on */
+  -webkit-line-clamp: @num;
 }

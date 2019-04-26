@@ -1,3 +1,10 @@
+/*
+ * @LastEditors: Mark
+ * @Description: In User Settings Edit
+ * @Author: Mark
+ * @Date: 2019-04-14 14:18:16
+ * @LastEditTime: 2019-04-26 18:55:37
+ */
 import React, { Component } from 'react';
 import styles from './index.module.less';
 import image14 from '@assets/image/14.jpg';
@@ -15,6 +22,12 @@ class CssStyleDemo extends Component {
         less 函数单位计算
         <div className={styles.lessBox}>
           <div className={styles.font}>这里是文字测试</div>
+        </div>
+        <div className={styles.fontOverflow_1}>
+          文字超出的css文本测试,正阿斯蒂芬卡死阿斯蒂芬教案设计按时交付拉萨大家阿拉斯加阿萨
+        </div>
+        <div className={styles.fontOverflow_multi}>
+          文字超出的css文本测试,正阿斯蒂芬卡死阿斯蒂芬教案设计按时交付拉萨大家阿拉斯加阿萨
         </div>
       </div>
     );

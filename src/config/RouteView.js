@@ -8,7 +8,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { inspectRouter } from '@utils/inspectRouter.js';
+import { inspectRouter } from '@/utils/inspectRouter.js';
 //此处用来处理路由和子路由的组件渲染
 
 class RouteView extends Component {

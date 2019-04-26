@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-03-13 22:11:01
- * @LastEditTime: 2019-04-16 00:04:01
+ * @LastEditTime: 2019-04-26 22:36:18
  * @LastEdit : 新增路由匹配机制
  -->
 
@@ -151,26 +151,26 @@ import styles from './index.module.less';
 ```js
 
   "@": path.resolve("src"),
-  "@api": path.resolve("src/api"),
-  "@assets": path.resolve("src/assets"),
-  "@components": path.resolve("src/components"),
-  "@config": path.resolve("src/config"),
-  "@pages": path.resolve("src/pages"),
-  "@store": path.resolve("src/store"),
-  "@utils": path.resolve("src/utils")
+  "@/api": path.resolve("src/api"),
+  "@/assets": path.resolve("src/assets"),
+  "@/components": path.resolve("src/components"),
+  "@/config": path.resolve("src/config"),
+  "@/pages": path.resolve("src/pages"),
+  "@/store": path.resolve("src/store"),
+  "@/utils": path.resolve("src/utils")
 
 ```
 
 js 中使用:
 
 ```js
-import { userLogin, getBannerList, getTestToken } from '@api/Demo';
+import { userLogin, getBannerList, getTestToken } from '@/api/Demo';
 
-import routes from '@pages/routes';
+import routes from '@/pages/routes';
 ```
 
 css 中使用需要添加 `~` 为前缀:
 
 ```css
-@import '~@assets/style/global.less';
+@import '~@/assets/style/global.less';
 ```

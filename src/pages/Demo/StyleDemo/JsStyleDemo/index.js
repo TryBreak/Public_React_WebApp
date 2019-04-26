@@ -6,7 +6,7 @@
  * @LastEditTime: 2019-04-15 23:56:39
  */
 import React, { Component } from 'react';
-import { fondRoute } from '@utils/inspectRouter.js';
+import { fondRoute } from '@/utils/inspectRouter.js';
 class JsStyleDemo extends Component {
   componentDidMount() {
     window.document.title = 'JsStyleDemo';

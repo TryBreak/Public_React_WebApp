@@ -12,7 +12,7 @@ import * as serviceWorker from './serviceWorker';
 import 'react-app-polyfill/ie9';
 import BaseRouter from './BaseRouter';
 import 'normalize.css';
-import '@assets/style/reset.less';
+import '@/assets/style/reset.less';
 
 console.log(
   `%c当前程序版本--${process.env.REACT_APP_VERSION}`,

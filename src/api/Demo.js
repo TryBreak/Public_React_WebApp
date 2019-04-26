@@ -1,4 +1,4 @@
-import { ajax } from '@utils/http';
+import { ajax } from '@/utils/http';
 import store from 'store';
 
 export const userLogin = async data => {

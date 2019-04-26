@@ -5,7 +5,7 @@
  * @Date: 2019-04-08 11:33:38
  * @LastEditTime: 2019-04-17 10:37:03
  */
-import routes from '@pages/routes';
+import routes from '@/pages/routes';
 
 export const getMainRoute = path => {
   return '/' + path.split('/')[1];

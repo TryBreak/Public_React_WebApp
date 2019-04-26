@@ -5,7 +5,7 @@
  * @Date: 2019-04-08 11:33:38
  * @LastEditTime: 2019-04-17 10:38:48
  */
-import _import from '@utils/_import';
+import _import from '@/utils/_import';
 
 const basePath = '';
 

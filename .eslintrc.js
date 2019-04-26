@@ -1,3 +1,10 @@
+/*
+ * @LastEditors: Mark
+ * @Description: In User Settings Edit
+ * @Author: Mark
+ * @Date: 2019-04-08 11:33:38
+ * @LastEditTime: 2019-04-26 11:58:37
+ */
 module.exports = {
   env: {
     browser: true,
@@ -15,8 +22,12 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['react', 'prettier'],
+  plugins: ['prettier'],
   rules: {
+    'react/jsx-filename-extension': [
+      1,
+      { extensions: ['.js', '.jsx', '.tsx'] },
+    ],
     'prettier/prettier': 'error',
     //必须使用\n换行
     'linebreak-style': ['error', 'unix'],

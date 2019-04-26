@@ -16,7 +16,6 @@
 
 .fontOverflow() {
   .w(100);
-  .m(10, 15);
 }
 .fontOverflow_1 {
   .fontOverflow();
@@ -25,5 +24,22 @@
 
 .fontOverflow_multi {
   .fontOverflow();
-  .fs_overflow(1);
+  .fs_overflow();
+  position: fixed;
+  .t(0);
+}
+
+.magin {
+  .w(200);
+  .h(200);
+  background-color: red;
+}
+.margin_1 {
+  .magin();
+  .m(100, auto);
+}
+
+.margin_2 {
+  .magin();
+  .m(100, 10);
 }

@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-14 14:18:16
- * @LastEditTime: 2019-04-26 18:55:37
+ * @LastEditTime: 2019-04-26 19:47:50
  */
 import React, { Component } from 'react';
 import styles from './index.module.less';
@@ -29,6 +29,8 @@ class CssStyleDemo extends Component {
         <div className={styles.fontOverflow_multi}>
           文字超出的css文本测试,正阿斯蒂芬卡死阿斯蒂芬教案设计按时交付拉萨大家阿拉斯加阿萨
         </div>
+        <div className={styles.margin_1}>margin的测试xxxxxxx</div>
+        <div className={styles.margin_2}>margin的测试xxxxxxx</div>
       </div>
     );
   }

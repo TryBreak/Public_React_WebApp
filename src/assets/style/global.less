@@ -35,13 +35,16 @@
 }
 
 /*----- margin -----*/
-.m(@t, @r:@t, @b:@t, @l:@r) {
+
+.m(@t, @r:@t, @b:@t, @l:@r) when (@r > 0) {
   margin: unit(@t / @htmlFontSize, rem) unit(@r / @htmlFontSize, rem)
     unit(@b / @htmlFontSize, rem) unit(@l / @htmlFontSize, rem);
 }
-.m_center(@px) {
-  margin: unit(@px / @htmlFontSize, rem) auto;
+
+.m(@t, @r:@t, @b:@t, @l:@r) when (@r = auto) {
+  margin: unit(@t / @htmlFontSize, rem) auto;
 }
+
 .mt(@px) {
   margin-top: unit(@px / @htmlFontSize, rem);
 }
@@ -120,7 +123,7 @@
 
 /*----- 文字超出隐藏显示... -----*/
 
-.fs_overflow(@num) when (@num = 1) {
+.fs_overflow(@num:1) when (@num = 1) {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;

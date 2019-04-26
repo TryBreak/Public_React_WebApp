@@ -125,11 +125,15 @@
   overflow: hidden;
 }
 // 多行文字隐藏显示...
+
+.box-vertical {
+  /*! autoprefixer: off */
+  -webkit-box-orient: vertical;
+}
 .multi_fs_overflow(@num) {
-  /*! autoprefixer: ignore next */
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-box-orient: vertical;
   -webkit-line-clamp: @num;
+  .box-vertical();
 }

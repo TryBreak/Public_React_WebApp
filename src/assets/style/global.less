@@ -36,7 +36,7 @@
 
 /*----- margin -----*/
 
-.m(@t, @r:@t, @b:@t, @l:@r) when (@r > 0) {
+.m(@t, @r:@t, @b:@t, @l:@r) when (@r >= 0) {
   margin: unit(@t / @htmlFontSize, rem) unit(@r / @htmlFontSize, rem)
     unit(@b / @htmlFontSize, rem) unit(@l / @htmlFontSize, rem);
 }
@@ -59,7 +59,7 @@
 }
 
 /*----- padding -----*/
-.p(@t, @r:@t, @b:@t, @l:@r) when (@r > 0) {
+.p(@t, @r:@t, @b:@t, @l:@r) when (@r >= 0) {
   padding: unit(@t / @htmlFontSize, rem) unit(@r / @htmlFontSize, rem)
     unit(@b / @htmlFontSize, rem) unit(@l / @htmlFontSize, rem);
 }

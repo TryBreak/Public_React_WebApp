@@ -3,14 +3,14 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-04-17 10:43:28
+ * @LastEditTime: 2019-05-05 17:00:38
  */
 import React, { Component } from 'react';
 
 //路由切换
 
-// import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { HashRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+// import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
 //路由切换 -- end
 

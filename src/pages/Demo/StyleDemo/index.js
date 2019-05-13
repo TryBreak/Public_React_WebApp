@@ -3,10 +3,10 @@
  * @Description: none
  * @Author: Mark
  * @Date: 2019-05-05 11:53:31
- * @LastEditTime: 2019-05-13 17:25:03
+ * @LastEditTime: 2019-05-13 18:54:04
  */
 import React, { Component } from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Link /* , Route */ } from 'react-router-dom';
 import RouteView from '../../../config/RouteView';
 class StyleDemo extends Component {
   render() {
@@ -23,11 +23,11 @@ class StyleDemo extends Component {
           </li>
         </ul>
         <RouteView match={match} />
-        <Route
+        {/* <Route
           exact
           path={match.path}
           render={() => <h3>这里是三级路由首页首页哦</h3>}
-        />
+        /> */}
       </div>
     );
   }

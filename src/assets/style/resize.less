@@ -3,7 +3,7 @@
 * @Description: less单位转换函数
 * @Author: Mark
 * @Date: 2019-05-05 11:53:31
-* @LastEditTime: 2019-05-13 16:04:51
+* @LastEditTime: 2019-05-13 18:57:25
  */
 
 @htmlFontSize: 100px;
@@ -67,13 +67,9 @@
 }
 
 /*----- padding -----*/
-.p(@t, @r:@t, @b:@t, @l:@r) when (@r >= 0) {
+.p(@t, @r:@t, @b:@t, @l:@r) {
   padding: unit(@t / @htmlFontSize, rem) unit(@r / @htmlFontSize, rem)
     unit(@b / @htmlFontSize, rem) unit(@l / @htmlFontSize, rem);
-}
-
-.p(@t, @r:@t, @b:@t, @l:@r) when (@r = auto) {
-  padding: unit(@t / @htmlFontSize, rem) auto;
 }
 
 .pt(@px) {

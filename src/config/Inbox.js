@@ -3,7 +3,7 @@
  * @Description: inbox页面,可用的页面列表
  * @Author: Mark
  * @Date: 2019-05-05 11:53:31
- * @LastEditTime: 2019-05-13 18:41:07
+ * @LastEditTime: 2019-05-13 18:43:28
  */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
@@ -21,8 +21,11 @@ const Navigation = ({ list }) => {
               <Link to={item.from + item.path}>{item.name}</Link>
             </h3>
             <h4>title: {item.title}</h4>
-            <h4>path: {item.from + item.path}</h4>
-            <p>description: {item.description}</p>
+            <h4>
+              path: &nbsp;&nbsp;
+              {item.from + item.path}
+            </h4>
+            <p>{item.description}</p>
             {item.children && <Navigation list={item.children.routes} />}
           </li>
         );

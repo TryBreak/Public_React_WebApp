@@ -2,15 +2,6 @@ import axios from 'axios';
 import Qs from 'qs';
 import store from 'store';
 import { res_dispose } from './res_dispose';
-//兼容 ie9
-if (!window.location.origin) {
-  window.location.origin =
-    window.location.protocol +
-    '//' +
-    window.location.hostname +
-    (window.location.port ? ':' + window.location.port : '');
-}
-//兼容 ie9 === end
 
 const origin = window.location.origin;
 let baseUrl = origin;

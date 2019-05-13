@@ -1,3 +1,10 @@
+/*
+ * @LastEditors: Mark
+ * @Description: none
+ * @Author: Mark
+ * @Date: 2019-05-05 11:53:31
+ * @LastEditTime: 2019-05-05 11:53:31
+ */
 import React, { Component } from 'react';
 import { Link, Route } from 'react-router-dom';
 import RouteView from '@/config/RouteView';
@@ -21,11 +28,6 @@ class Demo extends Component {
           </li>
         </ul>
         <RouteView match={match} />
-        <Route
-          exact
-          path={match.path}
-          render={() => <h3>这里是demo首页哦</h3>}
-        />
       </div>
     );
   }

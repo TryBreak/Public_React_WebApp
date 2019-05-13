@@ -1,3 +1,10 @@
+/*
+ * @LastEditors: Mark
+ * @Description: none
+ * @Author: Mark
+ * @Date: 2019-05-05 11:53:31
+ * @LastEditTime: 2019-05-13 17:25:03
+ */
 import React, { Component } from 'react';
 import { Link, Route } from 'react-router-dom';
 import RouteView from '../../../config/RouteView';
@@ -9,7 +16,7 @@ class StyleDemo extends Component {
         <h1>这里是 StyleDemo ,欢迎光临 , 这里是二级路由 </h1>
         <ul>
           <li>
-            <Link to="/demo/style_demo/css_style_demo">css_style_demo-a</Link>
+            <Link to="/demo/style_demo">css_style_demo-a</Link>
           </li>
           <li>
             <Link to="/demo/style_demo/js_style_demo">js_style_demo-a</Link>

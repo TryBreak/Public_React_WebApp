@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-04-15 22:27:24
+ * @LastEditTime: 2019-05-13 17:24:07
  */
 const _import = url => {
   let Template = require('.' + url);
@@ -16,7 +16,7 @@ const _import = url => {
 
 const routes = [
   {
-    path: '/css_style_demo',
+    path: '/',
     name: 'css样式演示',
     description: 'css样式演示',
     title: '三级路由-样式演示',

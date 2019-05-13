@@ -1,23 +1,22 @@
 /*
- * @LastEditors: Tiger
+ * @LastEditors: Mark
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-05-05 10:25:14
- * @LastEditTime: 2019-05-10 13:45:53
+ * @LastEditTime: 2019-05-13 16:22:23
  */
 
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
-import { Toast } from 'antd-mobile';
 import { tab_icon } from './img/load';
-import styles from './index.less';
+import styles from './index.module.less';
 class TabBar extends React.Component {
   static propTypes = {
     id: PropTypes.number, //需要高亮的ID
   };
   static defaultProps = {
-    id: 1,
+    id: 2,
   };
   constructor() {
     super();
@@ -41,12 +40,12 @@ class TabBar extends React.Component {
           name: '课程',
           id: 3,
         },
-        // {
-        //   icon: tab_icon.icon_4,
-        //   icon_active: tab_icon.icon_4_active,
-        //   name: '打卡',
-        //   id: 4,
-        // },
+        {
+          icon: tab_icon.icon_4,
+          icon_active: tab_icon.icon_4_active,
+          name: '打卡',
+          id: 4,
+        },
         {
           icon: tab_icon.icon_5,
           icon_active: tab_icon.icon_5_active,
@@ -64,25 +63,22 @@ class TabBar extends React.Component {
     if (item.id === id) {
       return false;
     }
-    const wx = window.wx;
     switch (item.id) {
       case 1:
         history.push('/');
         break;
 
       case 2:
-        Toast.info('敬请期待');
+        alert('敬请期待');
         break;
 
       case 3:
-        console.log('课程,跳转LIST');
         history.push('/lessionlist');
         break;
 
-      // case 4:
-      //   wx.miniProgram.navigateTo({ url: '/path/to/page' });
-      //   console.log('打卡,去小程序');
-      //   break;
+      case 4:
+        console.info('打卡,去小程序');
+        break;
 
       case 5:
         history.push('/personal');

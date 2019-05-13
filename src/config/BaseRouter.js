@@ -3,7 +3,7 @@
  * @Description: 上层组件,用来承载 React 页面
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-05-13 15:54:57
+ * @LastEditTime: 2019-05-13 16:19:17
  */
 import React, { Component } from 'react';
 
@@ -25,6 +25,9 @@ import * as store from '@/store/index';
 
 //加载请求的设置
 import { $axios_set_default } from '@/utils/http';
+
+//全局插件
+import TabBar from '@/components/TabBar';
 
 class App extends Component {
   constructor(props) {
@@ -70,6 +73,7 @@ class BaseRouter extends Component {
       <Provider store={store}>
         <Router>
           <Route exact component={App} />
+          <TabBar />
         </Router>
       </Provider>
     );

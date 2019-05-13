@@ -193,5 +193,5 @@ import routes from '@/pages/routes';
 css 中使用需要添加 `~` 为前缀:
 
 ```css
-@import '~@/assets/style/global.less';
+@import '~@/assets/style/resize.less';
 ```

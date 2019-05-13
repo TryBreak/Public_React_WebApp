@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-03-13 22:11:01
- * @LastEditTime: 2019-04-26 22:45:14
+ * @LastEditTime: 2019-05-13 15:47:10
  * @LastEdit : 新增路由匹配机制
  -->
 
@@ -59,7 +59,7 @@ npm run local-serve
 
 - 修改 `package.json`中的`browserslist`
 
-- 添加 `.env` 文件来监控端口号和设定环境变量
+- 添加 `.env` 设定环境变量
 
 - 修改 `public\index.html`
 
@@ -68,6 +68,7 @@ npm run local-serve
 - 新增 `react-router-dom` 实现路由跳转
 
   - 采用配置文件的形式管理路由
+  - 编写 reouterView 插件机制,采用中心化路由管理模式控制路由
 
 - css 预处理器配置
 
@@ -107,6 +108,29 @@ store.js
 文档地址
 <https://github.com/marcuswestin/store.js>
 
+使用方式:
+
+```js
+import { localStore } from '@/utils/utils.js';
+
+// Store current user
+store.set('user', { name: 'Marcus' });
+
+// Get current user
+store.get('user');
+
+// Remove current user
+store.remove('user');
+
+// Clear all keys
+store.clearAll();
+
+// Loop over all stored values
+store.each(function(value, key) {
+  console.log(key, '==', value);
+});
+```
+
 ## 实用工具库
 
 Lodash
@@ -144,7 +168,7 @@ import styles from './index.module.less';
 <h2 className={styles.title}>Demo</h2>;
 ```
 
-如果要像这样模块化使用样式类 , 则 less 或者 css 或者 scss 文件必须以 `xxx.module.less/css/scss` 的形式命名 , 文件名中间必须包含 `.module`
+如果要像这样模块化使用样式类 , 则 less 或者 css 或者 scss 文件必须以 `xxx.module.less/css/scss` 的形式命名 , 文件名中间必须包含 `.module.`
 
 ## js 模块引用的路径别名配置 `Webpack alias`
 
@@ -155,13 +179,6 @@ import styles from './index.module.less';
 ```js
 
   "@": path.resolve("src"),
-  // "@/api": path.resolve("src/api"),
-  // "@/assets": path.resolve("src/assets"),
-  // "@/components": path.resolve("src/components"),
-  // "@/config": path.resolve("src/config"),
-  // "@/pages": path.resolve("src/pages"),
-  // "@/store": path.resolve("src/store"),
-  // "@/utils": path.resolve("src/utils")
 
 ```
 

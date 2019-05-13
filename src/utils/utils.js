@@ -1,21 +1,29 @@
+/*
+ * @LastEditors: Mark
+ * @Description: 常用的工具类函数
+ * @Author: Mark
+ * @Date: 2019-05-05 11:53:31
+ * @LastEditTime: 2019-05-13 15:39:34
+ */
+
 import Qs from 'qs';
 import { baseUrl } from '../config/baseUrl';
 import store from 'store';
 
 export const localStore = store;
 
-export const getUrlParam = () => {
+export const getUrlParam = (searchStr = window.location.search) => {
   /**
-   * @description: 获取当前页面的路由
+   * @description: 获取当前页面的路由或者指定页面的路由
    * @param null
    * @return: {*}
    */
-  return Qs.parse(window.location.search, { ignoreQueryPrefix: true });
+  return Qs.parse(searchStr, { ignoreQueryPrefix: true });
 };
 
 export const filterImageUrl = param => {
   /**
-   * @description: 图片链接过滤器
+   * @description: 图片链接过滤器,专门针对dookay接口制定
    * @param
               "[{"title":"1556601754","file":"/upxxx
               ||
@@ -59,8 +67,10 @@ export const formatDate = timeUnix => {
 export const fs_overflow = (str, num) => {
   /**
    * @description:  文字超出个数点点点
+   *
    * @str  //需要裁切的文字
    * @num   //裁切个数
+   *
    * @return: string
    */
   if (str) {

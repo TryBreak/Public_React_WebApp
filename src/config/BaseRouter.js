@@ -3,7 +3,7 @@
  * @Description: 上层组件,用来承载 React 页面
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-05-13 16:19:17
+ * @LastEditTime: 2019-05-13 16:56:59
  */
 import React, { Component } from 'react';
 
@@ -17,7 +17,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Inbox from './Inbox'; //页面集合全路由展示
 import RouteView from './RouteView'; //路由渲染文件
 import { project_detail } from '@/config/constants';
-import { fondRoute, splitPath } from '@/utils/inspectRouter';
+import { fondRoute, splitPath, storagePath } from '@/utils/inspectRouter';
 
 // Mobx
 import { Provider } from 'mobx-react';
@@ -26,8 +26,10 @@ import * as store from '@/store/index';
 //加载请求的设置
 import { $axios_set_default } from '@/utils/http';
 
-//全局插件
+//TabBar
 import TabBar from '@/components/TabBar';
+
+//存储
 
 class App extends Component {
   constructor(props) {
@@ -41,6 +43,8 @@ class App extends Component {
     this.watchRouter();
   }
   titleAnd404 = pathname => {
+    storagePath(this.props.history, pathname);
+
     const nowRouter = fondRoute(pathname);
     const nowPath = splitPath(pathname);
     if (nowRouter) {

@@ -3,9 +3,10 @@
  * @Description: 路由的相关处理查询函数
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-05-13 15:37:37
+ * @LastEditTime: 2019-05-13 16:56:55
  */
 import routes from '@/pages/routes';
+import { localStore } from '@/utils/utils.js';
 
 export const getMainRoute = path => {
   return '/' + path.split('/')[1];
@@ -120,4 +121,20 @@ export const fondRoute = pathname => {
       return false;
     }
   }
+};
+
+// 存储最近的30条路由访问记录
+export const storagePath = (history, pathname, option) => {
+  const opt = option || {};
+  const num = opt.num || 30;
+  // if (history.action === 'POP') {
+  //   localStore.remove('pathArr');
+  // }
+  const pathArr = localStore.get('routerHistory') || [];
+  pathArr.push(pathname);
+  let storageArr = pathArr;
+  if (pathArr.length >= num) {
+    storageArr = pathArr.slice(pathArr.length - num, pathArr.length);
+  }
+  localStore.set('routerHistory', storageArr);
 };

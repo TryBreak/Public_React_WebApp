@@ -3,12 +3,11 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-04-17 10:38:48
+ * @LastEditTime: 2019-05-13 18:29:24
  */
 import _import from '@/utils/_import';
-
 const basePath = '';
-
+const fatherPath = '';
 const routes = [
   {
     path: '/',
@@ -16,6 +15,7 @@ const routes = [
     description: '这里是是首页落地页',
     title: '首页',
     component: _import(basePath + '/Home'),
+    from: fatherPath,
   },
   {
     path: '/demo',
@@ -23,6 +23,7 @@ const routes = [
     description: '这里是演示页面',
     title: '演示',
     component: _import(basePath + '/Demo'),
+    from: fatherPath,
     children: {
       routes: _import(basePath + '/Demo/routes'),
     },
@@ -33,6 +34,7 @@ const routes = [
     description: '这里是演示页面',
     title: '演示',
     component: _import(basePath + '/Demo'),
+    from: fatherPath,
     children: {
       routes: _import(basePath + '/Demo/routes'),
     },
@@ -43,6 +45,7 @@ const routes = [
     description: '这里是演示页面',
     title: '演示',
     component: _import(basePath + '/Demo'),
+    from: fatherPath,
     children: {
       routes: _import(basePath + '/Demo/routes'),
     },
@@ -53,6 +56,7 @@ const routes = [
     description: '404',
     title: 'Not Found',
     component: _import(basePath + '/NotFound'),
+    from: fatherPath,
   },
 ];
 

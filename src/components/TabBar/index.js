@@ -3,14 +3,17 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-05-05 10:25:14
- * @LastEditTime: 2019-05-13 17:22:24
+ * @LastEditTime: 2019-05-13 17:49:47
  */
 
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 import { tab_icon } from './img/load';
 import styles from './index.module.less';
+
+import { isChildRoute } from '@/utils/inspectRouter.js';
+
 class TabBar extends React.Component {
   static propTypes = {};
   static defaultProps = {};
@@ -60,6 +63,7 @@ class TabBar extends React.Component {
   linkTo = Url => {
     const { history } = this.props;
     const { pathname } = history.location;
+
     if (pathname !== Url) {
       history.push(Url);
     }
@@ -90,10 +94,19 @@ class TabBar extends React.Component {
         break;
     }
   };
-  render() {
-    const { tabList } = this.state;
+
+  isActive = item => {
     const { history } = this.props;
     const { pathname } = history.location;
+    // 路邮相等或者判定为二级以上子路由则判定为选中
+    return (
+      isChildRoute({ father: item.linkPath, child: pathname }) > 1 ||
+      item.linkPath === pathname
+    );
+  };
+
+  render() {
+    const { tabList } = this.state;
 
     return (
       <div className={styles.wrapper}>
@@ -103,9 +116,7 @@ class TabBar extends React.Component {
             return (
               <div
                 className={
-                  styles.item +
-                  ' ' +
-                  (pathname === item.linkPath && styles.active)
+                  styles.item + ' ' + (this.isActive(item) && styles.active)
                 }
                 key={item.id}
                 onClick={() => this.hrefTo(item)}
@@ -113,9 +124,7 @@ class TabBar extends React.Component {
                 <img
                   className={styles.icon}
                   alt="icon"
-                  src={
-                    pathname === item.linkPath ? item.icon_active : item.icon
-                  }
+                  src={this.isActive(item) ? item.icon_active : item.icon}
                 />
                 <span className={styles.name}>{item.name}</span>
               </div>

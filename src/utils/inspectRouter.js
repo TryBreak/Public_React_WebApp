@@ -3,7 +3,7 @@
  * @Description: 路由的相关处理查询函数
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-05-13 17:11:55
+ * @LastEditTime: 2019-05-13 17:46:03
  */
 import routes from '@/pages/routes';
 import { localStore } from '@/utils/utils.js';
@@ -132,6 +132,22 @@ export const fondRoute = pathname => {
       return false;
     }
   }
+};
+
+export const isChildRoute = ({ father, child }) => {
+  const fatherArr = splitPath(father);
+  const childArr = splitPath(child);
+  const returnArr = [];
+  for (let i = 0; i < childArr.length; i++) {
+    const child = childArr[i];
+    const father = fatherArr[i];
+    if (father) {
+      if (child === father) {
+        returnArr.push(true);
+      }
+    }
+  }
+  return returnArr.length;
 };
 
 // 存储最近的30条路由访问记录

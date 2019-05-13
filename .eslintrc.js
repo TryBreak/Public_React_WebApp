@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-04-26 11:58:37
+ * @LastEditTime: 2019-05-13 16:12:55
  */
 module.exports = {
   env: {
@@ -45,7 +45,20 @@ module.exports = {
     // 'semi-spacing': ['error', { before: true, after: true }],
     'semi-style': ['error', 'last'],
     //console
-    'no-console': ['warn', { allow: ['warn', 'error', 'info'] }],
+    'no-console': [
+      'warn',
+      {
+        allow: [
+          'warn',
+          'error',
+          'info',
+          'group',
+          'groupCollapsed',
+          'groupEnd',
+          'table',
+        ],
+      },
+    ],
     //禁用常量表达式
     'no-constant-condition': 'error',
     //禁止出现重复的键

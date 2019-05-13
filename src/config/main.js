@@ -3,7 +3,7 @@
  * @Description: webApp的入口文件
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-05-13 15:52:53
+ * @LastEditTime: 2019-05-13 16:10:41
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -12,12 +12,20 @@ import 'react-app-polyfill/ie9';
 import BaseRouter from './BaseRouter';
 import 'normalize.css';
 import '@/assets/style/reset.less';
-
-console.info(
-  `%c当前程序版本--${process.env.REACT_APP_VERSION}`,
+import { version } from './baseUrl';
+console.group(
+  `%c version -- ${version.code}`,
   'font-size:10;color:green;font-weight:bold;'
 );
-
+console.info(
+  `%c describe -- ${version.describe}`,
+  'font-size:10;color:green;font-weight:bold;'
+);
+console.info(
+  `%c user -- ${version.user}`,
+  'font-size:10;color:green;font-weight:bold;'
+);
+console.groupEnd();
 //兼容 ie9
 if (!window.location.origin) {
   window.location.origin =

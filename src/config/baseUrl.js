@@ -3,7 +3,7 @@
  * @Description: 版本号管理和baseUrl管理
  * @Author: Mark
  * @Date: 2019-05-13 15:18:24
- * @LastEditTime: 2019-05-13 15:53:54
+ * @LastEditTime: 2019-05-13 16:09:11
  */
 
 // let url = 'https://xcx.joywaygym.com'; //生产服
@@ -15,7 +15,7 @@ export const baseUrl = url;
 const versionList = [
   {
     code: '0.1.0',
-    describe: '这里是上传',
+    describe: 'Public_React_WebApp',
     user: 'Mark',
   },
 ];

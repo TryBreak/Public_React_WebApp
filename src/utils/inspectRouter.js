@@ -3,7 +3,7 @@
  * @Description: 路由的相关处理查询函数
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-05-13 16:56:55
+ * @LastEditTime: 2019-05-13 17:11:55
  */
 import routes from '@/pages/routes';
 import { localStore } from '@/utils/utils.js';
@@ -12,8 +12,12 @@ export const getMainRoute = path => {
   return '/' + path.split('/')[1];
 };
 
-//将路径切分为标准数组
 export const splitPath = path => {
+  /**
+   * @description: 将路由器额分成数组
+   * @param path
+   * @return: []
+   */
   const pathArr = [];
   const path_split = path.split('/');
   if (path === '/') {
@@ -31,6 +35,13 @@ export const splitPath = path => {
 
 export const inspect404 = ({ pathname }) => {
   const nowPath = getMainRoute(pathname);
+  /**
+   * @description: 查找404页面
+   * @param {
+   *  pathname
+   * }
+   * @return: {}
+   */
   const find = routes.find(item => {
     return nowPath === item.path;
   });

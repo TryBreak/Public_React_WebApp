@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-05-13 17:24:07
+ * @LastEditTime: 2019-05-13 18:24:11
  */
 const _import = url => {
   let Template = require('.' + url);
@@ -13,6 +13,7 @@ const _import = url => {
     console.error('页面路由组件引用出现了问题!! -- ' + url);
   }
 };
+// import _import from '@/utils/_import';
 
 const routes = [
   {

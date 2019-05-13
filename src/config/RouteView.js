@@ -1,9 +1,9 @@
 /*
  * @LastEditors: Mark
- * @Description: 路由渲染
+ * @Description: 中心化的路由渲染插件
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-05-13 15:36:52
+ * @LastEditTime: 2019-05-13 15:52:28
  */
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';

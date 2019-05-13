@@ -1,9 +1,9 @@
 /*
  * @LastEditors: Mark
- * @Description: none
+ * @Description: 版本号管理和baseUrl管理
  * @Author: Mark
  * @Date: 2019-05-13 15:18:24
- * @LastEditTime: 2019-05-13 15:28:45
+ * @LastEditTime: 2019-05-13 15:53:54
  */
 
 // let url = 'https://xcx.joywaygym.com'; //生产服

@@ -3,13 +3,11 @@
  * @Description: inbox页面,可用的页面列表
  * @Author: Mark
  * @Date: 2019-05-05 11:53:31
- * @LastEditTime: 2019-05-13 18:43:28
+ * @LastEditTime: 2019-05-13 18:44:59
  */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import routes from '@/pages/routes';
-
-console.log(routes);
 
 const Navigation = ({ list }) => {
   return (

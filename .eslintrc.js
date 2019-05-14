@@ -3,24 +3,17 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-05-13 16:12:55
+ * @LastEditTime: 2019-05-14 15:41:03
  */
 module.exports = {
-  env: {
-    browser: true,
-    es6: true,
-  },
   extends: ['react-app', 'plugin:prettier/recommended'],
   globals: {
+    // 这里填入你的项目需要的全局变量
+    // 这里值为 false 表示这个全局变量不允许被重新赋值，比如：
+    // jQuery: false,
+    // $: false
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
-  },
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 2018,
-    sourceType: 'module',
   },
   plugins: ['prettier'],
   rules: {

@@ -51,6 +51,11 @@
       "/mnt/c/Mark/MyProject/Public_React_WebApp/node_modules/jest-watch-typeahead/testname.js"
     ]
   },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
+  },
   "dependencies": {
     "@babel/core": "7.4.4",
     "@svgr/webpack": "4.2.0",
@@ -67,7 +72,7 @@
     "dotenv": "8.0.0",
     "dotenv-expand": "5.1.0",
     "file-loader": "3.0.1",
-    "fs-extra": "8.0.0",
+    "fs-extra": "8.0.1",
     "html-webpack-plugin": "4.0.0-alpha.2",
     "identity-obj-proxy": "3.0.0",
     "jest": "^24.8.0",
@@ -119,12 +124,7 @@
     "eslint-plugin-react-hooks": "^1.6.0",
     "koa": "^2.7.0",
     "koa-static": "^5.0.0",
-    "prettier": "1.17.0"
-  },
-  "babel": {
-    "presets": [
-      "react-app"
-    ]
+    "prettier": "1.17.1"
   },
   "scripts": {
     "start": "node scripts/start.js",

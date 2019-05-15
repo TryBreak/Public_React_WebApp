@@ -3,7 +3,7 @@
  * @Description: 上层组件,用来承载 React 页面
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-05-13 16:56:59
+ * @LastEditTime: 2019-05-15 14:22:38
  */
 import React, { Component } from 'react';
 
@@ -28,8 +28,6 @@ import { $axios_set_default } from '@/utils/http';
 
 //TabBar
 import TabBar from '@/components/TabBar';
-
-//存储
 
 class App extends Component {
   constructor(props) {

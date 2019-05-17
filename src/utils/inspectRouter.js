@@ -3,7 +3,7 @@
  * @Description: 路由的相关处理查询函数
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-05-17 14:46:26
+ * @LastEditTime: 2019-05-17 14:55:56
  */
 import routes from '@/pages/routes';
 import { localStore } from '@/utils/utils.js';
@@ -73,7 +73,7 @@ export const recursion = (pathArr) => {
         }
       }
     }
-    count++;
+    count += 1;
     if (count < degree) {
       find();
     }
@@ -119,7 +119,7 @@ export const fondRoute = (pathname) => {
       } else {
       }
     }
-    count++;
+    count += 1;
     count < degree && find();
   }
 

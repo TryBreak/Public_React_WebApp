@@ -1,3 +1,10 @@
+/*
+ * @LastEditors: Mark
+ * @Description: none
+ * @Author: Mark
+ * @Date: 2019-05-05 11:53:31
+ * @LastEditTime: 2019-05-17 14:47:16
+ */
 import { observable, action, computed } from 'mobx';
 
 class HomeStore {
@@ -11,14 +18,14 @@ class HomeStore {
 
   @action
   plus = () => {
-    this.num = ++this.num;
+    this.num += 1;
   };
 
   minus = () => {
-    this.num = --this.num;
+    this.num -= 1;
   };
 
-  change = str => {
+  change = (str) => {
     this.text = str;
   };
   @computed

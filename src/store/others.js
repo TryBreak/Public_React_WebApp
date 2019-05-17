@@ -1,3 +1,10 @@
+/*
+ * @LastEditors: Mark
+ * @Description: none
+ * @Author: Mark
+ * @Date: 2019-05-05 11:53:31
+ * @LastEditTime: 2019-05-17 14:47:31
+ */
 import { observable, action } from 'mobx';
 
 class OthersStore {
@@ -8,9 +15,9 @@ class OthersStore {
   }
   @action
   getData = () => {
-    fetch('api/comments/show?id=4199740256395164&page=1').then(res => {
+    fetch('api/comments/show?id=4199740256395164&page=1').then((res) => {
       res.json().then(
-        action(data => {
+        action((data) => {
           this.str = data.msg;
         })
       );

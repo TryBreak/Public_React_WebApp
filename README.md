@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-03-13 22:11:01
- * @LastEditTime: 2019-05-13 15:47:10
+ * @LastEditTime: 2019-05-17 14:39:55
  * @LastEdit : 新增路由匹配机制
  -->
 
@@ -41,16 +41,32 @@ npm run local-serve
 插件安装建议
 
 - ESLint
-- ES7 React/Redux
-- Prettier
-- Path Intellisense
 
-当前版本需要关闭修饰器警告
-
-在 setting.json 中加入设置:
+### settings.json 设置
 
 ```json
-  "javascript.implicitProjectConfig.experimentalDecorators": true
+{
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    "html",
+    "javascript",
+    "javascriptreact",
+    {
+      "language": "typescript",
+      "autoFix": true
+    },
+    {
+      "language": "typescriptreact",
+      "autoFix": true
+    },
+    {
+      "language": "vue",
+      "autoFix": true
+    }
+  ],
+}
 ```
 
 ## 脚手架定制化

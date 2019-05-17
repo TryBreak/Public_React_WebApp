@@ -3,7 +3,7 @@
  * @Description: 常用的工具类函数
  * @Author: Mark
  * @Date: 2019-05-05 11:53:31
- * @LastEditTime: 2019-05-13 15:39:34
+ * @LastEditTime: 2019-05-17 14:46:42
  */
 
 import Qs from 'qs';
@@ -21,7 +21,7 @@ export const getUrlParam = (searchStr = window.location.search) => {
   return Qs.parse(searchStr, { ignoreQueryPrefix: true });
 };
 
-export const filterImageUrl = param => {
+export const filterImageUrl = (param) => {
   /**
    * @description: 图片链接过滤器,专门针对dookay接口制定
    * @param
@@ -48,7 +48,7 @@ export const filterImageUrl = param => {
   return returnUrl;
 };
 
-export const formatDate = timeUnix => {
+export const formatDate = (timeUnix) => {
   /**
    * @description: 时间戳格式化
    * @param timeUnix
@@ -61,7 +61,7 @@ export const formatDate = timeUnix => {
   let hour = now.getHours();
   let minute = now.getMinutes();
 
-  return year + '-' + month + '-' + date + '   ' + hour + ':' + minute;
+  return `${year}-${month}-${date}   ${hour}:${minute}`;
 };
 
 export const fs_overflow = (str, num) => {
@@ -75,7 +75,7 @@ export const fs_overflow = (str, num) => {
    */
   if (str) {
     if (str.length > num) {
-      return str.slice(0, num) + '...';
+      return `${str.slice(0, num)}...`;
     } else {
       return str;
     }

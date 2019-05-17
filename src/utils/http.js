@@ -1,3 +1,10 @@
+/*
+ * @LastEditors: Mark
+ * @Description: none
+ * @Author: Mark
+ * @Date: 2019-05-05 11:53:31
+ * @LastEditTime: 2019-05-17 14:46:12
+ */
 import axios from 'axios';
 import Qs from 'qs';
 import store from 'store';
@@ -19,11 +26,11 @@ const $axios_set_default = () => {
   service.defaults.timeout = 8000; //超时 8 秒
   //请求拦截
   service.interceptors.request.use(
-    config => {
+    (config) => {
       // console.info('请求开始');
       return config;
     },
-    error => {
+    (error) => {
       console.error(error);
       return Promise.reject(error);
     }
@@ -31,25 +38,25 @@ const $axios_set_default = () => {
 
   //响应拦截
   service.interceptors.response.use(
-    response => {
+    (response) => {
       // console.info('请求结束');
       const data = response.data;
       res_dispose(data);
       return data;
     },
-    error => {
+    (error) => {
       return Promise.reject(error);
     }
   );
 };
-const ajax = param => {
+const ajax = (param) => {
   const config = {
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
-      Authorization: 'Bearer ' + store.get('token'),
+      Authorization: `Bearer ${store.get('token')}`,
     },
     transformRequest: [
-      data => {
+      (data) => {
         const param = Qs.stringify(data);
         return param;
       },

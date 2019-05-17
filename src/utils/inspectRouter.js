@@ -3,16 +3,16 @@
  * @Description: 路由的相关处理查询函数
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-05-13 17:46:03
+ * @LastEditTime: 2019-05-17 14:46:26
  */
 import routes from '@/pages/routes';
 import { localStore } from '@/utils/utils.js';
 
-export const getMainRoute = path => {
-  return '/' + path.split('/')[1];
+export const getMainRoute = (path) => {
+  return `/${path.split('/')[1]}`;
 };
 
-export const splitPath = path => {
+export const splitPath = (path) => {
   /**
    * @description: 将路由器额分成数组
    * @param path
@@ -27,7 +27,7 @@ export const splitPath = path => {
   for (let i = 0; i < path_split.length; i++) {
     const el = path_split[i];
     if (el) {
-      pathArr.push('/' + el);
+      pathArr.push(`/${el}`);
     }
   }
   return pathArr;
@@ -42,7 +42,7 @@ export const inspect404 = ({ pathname }) => {
    * }
    * @return: {}
    */
-  const find = routes.find(item => {
+  const find = routes.find((item) => {
     return nowPath === item.path;
   });
   if (nowPath === '/inbox') {
@@ -51,7 +51,7 @@ export const inspect404 = ({ pathname }) => {
   return find;
 };
 
-export const recursion = pathArr => {
+export const recursion = (pathArr) => {
   const degree = pathArr.length;
 
   let returnRoutes = routes;
@@ -63,7 +63,7 @@ export const recursion = pathArr => {
     return returnRoutes;
   }
   function find() {
-    let path = '/' + pathArr[count];
+    let path = `/${pathArr[count]}`;
     for (let i = 0; i < returnRoutes.length; i++) {
       const el = returnRoutes[i];
       if (path === el.path) {
@@ -88,7 +88,7 @@ export const inspectRouter = ({ pathname }) => {
 };
 
 //匹配和查找路由,返回路由的配置信息
-export const fondRoute = pathname => {
+export const fondRoute = (pathname) => {
   const pathArr = splitPath(pathname);
   let nowRoutes = '';
   const degree = pathArr.length;

@@ -3,7 +3,7 @@
  * @Description: 上层组件,用来承载 React 页面
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-05-15 14:22:38
+ * @LastEditTime: 2019-05-17 14:50:54
  */
 import React, { Component } from 'react';
 
@@ -40,7 +40,7 @@ class App extends Component {
   componentWillUpdate() {
     this.watchRouter();
   }
-  titleAnd404 = pathname => {
+  titleAnd404 = (pathname) => {
     storagePath(this.props.history, pathname);
 
     const nowRouter = fondRoute(pathname);

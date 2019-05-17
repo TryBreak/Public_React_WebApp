@@ -3,7 +3,7 @@
  * @Description: inbox页面,可用的页面列表
  * @Author: Mark
  * @Date: 2019-05-05 11:53:31
- * @LastEditTime: 2019-05-13 18:44:59
+ * @LastEditTime: 2019-05-17 14:51:16
  */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
@@ -12,7 +12,7 @@ import routes from '@/pages/routes';
 const Navigation = ({ list }) => {
   return (
     <ul>
-      {list.map(item => {
+      {list.map((item) => {
         return (
           <li key={item.path}>
             <h3>

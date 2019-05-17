@@ -3,7 +3,7 @@
  * @Description: webApp的入口文件
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-05-13 16:16:30
+ * @LastEditTime: 2019-05-17 14:52:48
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -15,16 +15,6 @@ import '@/assets/style/reset.less';
 import { printVersion } from './baseUrl';
 
 printVersion();
-
-//兼容 ie9
-if (!window.location.origin) {
-  window.location.origin =
-    window.location.protocol +
-    '//' +
-    window.location.hostname +
-    (window.location.port ? ':' + window.location.port : '');
-}
-//兼容 ie9 === end
 
 ReactDOM.render(<BaseRouter />, document.getElementById('root'));
 

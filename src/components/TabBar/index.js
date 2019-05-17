@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-05-05 10:25:14
- * @LastEditTime: 2019-05-13 17:49:47
+ * @LastEditTime: 2019-05-17 14:53:13
  */
 
 import React from 'react';
@@ -60,7 +60,7 @@ class TabBar extends React.Component {
     };
   }
 
-  linkTo = Url => {
+  linkTo = (Url) => {
     const { history } = this.props;
     const { pathname } = history.location;
 
@@ -69,7 +69,7 @@ class TabBar extends React.Component {
     }
   };
 
-  hrefTo = item => {
+  hrefTo = (item) => {
     const _this = this;
 
     _this.linkTo(item.linkPath);
@@ -95,7 +95,7 @@ class TabBar extends React.Component {
     }
   };
 
-  isActive = item => {
+  isActive = (item) => {
     const { history } = this.props;
     const { pathname } = history.location;
     // 路邮相等或者判定为二级以上子路由则判定为选中
@@ -112,14 +112,16 @@ class TabBar extends React.Component {
       <div className={styles.wrapper}>
         <div className={styles.null} />
         <div className={styles.tabBar}>
-          {tabList.map(item => {
+          {tabList.map((item) => {
             return (
               <div
                 className={
-                  styles.item + ' ' + (this.isActive(item) && styles.active)
+                  `${styles.item} ${this.isActive(item) && styles.active}`
                 }
                 key={item.id}
-                onClick={() => this.hrefTo(item)}
+                onClick={() => {
+                  return this.hrefTo(item);
+                }}
               >
                 <img
                   className={styles.icon}

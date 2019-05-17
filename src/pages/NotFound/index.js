@@ -1,3 +1,10 @@
+/*
+ * @LastEditors: Mark
+ * @Description: none
+ * @Author: Mark
+ * @Date: 2019-05-05 11:53:31
+ * @LastEditTime: 2019-05-05 11:53:31
+ */
 import React, { Component } from 'react';
 class NotFound extends Component {
   render() {

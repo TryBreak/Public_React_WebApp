@@ -1,3 +1,10 @@
+/*
+ * @LastEditors: Mark
+ * @Description: none
+ * @Author: Mark
+ * @Date: 2019-05-05 11:53:31
+ * @LastEditTime: 2019-05-17 14:50:37
+ */
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 @inject('store') // 将store注入到当前组件中

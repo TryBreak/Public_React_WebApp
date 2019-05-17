@@ -3,7 +3,7 @@
  * @Description: In User Settings Edit
  * @Author: Mark
  * @Date: 2019-04-08 11:33:38
- * @LastEditTime: 2019-05-13 18:26:36
+ * @LastEditTime: 2019-05-17 14:49:29
  */
 import _import from '@/utils/_import';
 
@@ -16,7 +16,7 @@ const routes = [
     name: 'css样式演示',
     description: 'css样式演示',
     title: '三级路由-样式演示',
-    component: _import(basePath + '/CssStyleDemo'),
+    component: _import(`${basePath}/CssStyleDemo`),
     from: fatherPath,
   },
   {
@@ -24,7 +24,7 @@ const routes = [
     name: 'js样式演示',
     description: 'js样式演示',
     title: '',
-    component: _import(basePath + '/JsStyleDemo'),
+    component: _import(`${basePath}/JsStyleDemo`),
     from: fatherPath,
   },
 ];
